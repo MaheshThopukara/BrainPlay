@@ -73,6 +73,19 @@ header.nav{
 .btn-p:hover{background:#7A69FF}
 .btn-s{border-color:var(--hair2); color:var(--ink); background:rgba(255,255,255,.03)}
 .btn-s:hover{background:rgba(255,255,255,.07)}
+/* Play badge: Google's own asset can't be restyled or recoloured, so this is a plain
+   button carrying the store's triangle mark rather than an imitation of the badge. */
+.btn-play{padding:11px 22px 11px 18px; gap:12px}
+.btn-play svg{width:22px; height:24px; flex:none}
+.btn-play .lbl{display:flex; flex-direction:column; line-height:1.18; text-align:left}
+.btn-play .lbl small{font-size:.68rem; font-weight:500; opacity:.85; letter-spacing:.04em}
+.btn-play .lbl b{font-size:.98rem; font-weight:600}
+.getbar{
+  display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  background:var(--surf); border:1px solid var(--hair); border-radius:16px; padding:30px 34px;
+}
+.getbar p{margin:0; color:var(--mute); font-size:.94rem; max-width:52ch}
+.getbar h2{margin-bottom:6px}
 
 /* stat band */
 .stats{
