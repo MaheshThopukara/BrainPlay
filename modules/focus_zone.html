@@ -8,7 +8,7 @@
 <meta property="og:title" content="Focus Zone — BrainPlay">
 <meta property="og:description" content="Quick-draw attention drills — track, scan, tap. Builds working memory, sustained focus and inhibitory control.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/feature.png">
+<meta property="og:image" content="https://maheshthopukara.github.io/BrainPlay/assets/feature.png">
 <meta name="theme-color" content="#0E0F13">
 <link rel="icon" href="../assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="../index.html"><img src="../assets/icon.png" alt="">BrainPlay</a>
   <div class="nav-sp"></div>
+  <a class="lnk" href="../index.html#screens">Every screen</a>
   <a class="lnk" href="../index.html#worlds">Worlds</a>
   <a class="lnk" href="../index.html#how">How it works</a>
   <a class="lnk" href="../index.html#grownups">For grown-ups</a>
@@ -28,6 +29,14 @@
      style="color:var(--accent);font-weight:600">Get the app ↗</a>
 </div></header>
 
+<input class="ctl" type="radio" name="ctl" id="ctl-tv" value="tv" checked>
+<input class="ctl" type="radio" name="ctl" id="ctl-touch" value="touch">
+<script>
+(function(){var k=null;try{k=localStorage.getItem('bp-controls')}catch(_){}
+if(k!=='tv'&&k!=='touch'){k=matchMedia('(pointer:coarse)').matches?'touch':'tv'}
+document.getElementById('ctl-'+k).checked=true;
+document.addEventListener('change',function(ev){if(ev.target.name==='ctl'){try{localStorage.setItem('bp-controls',ev.target.value)}catch(_){}}});})();
+</script>
 <div class="wrap mhead" style="--ma:#3CE6C9">
   <a class="back" href="../index.html#worlds">← All worlds</a>
   <div class="em">🎯</div>
@@ -35,12 +44,17 @@
   <h1>Focus Zone</h1>
   <p class="lede">Quick-draw attention drills — track, scan, tap. Builds working memory, sustained focus and inhibitory control.</p>
   <p class="mute" style="font-size:.88rem">19 games · in the order we'd teach them</p>
+  <div class="ctlrow">How to play, for
+    <span class="ctlbar"><label for="ctl-tv">📺 TV remote</label><label for="ctl-touch">👆 Touch screen</label></span>
+  </div>
 </div>
 <div class="wrap"><div class="games" style="--ma:#3CE6C9">
     <article class="game" id="cup_shuffle" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-cup_shuffle"><img src="thumbs/cup_shuffle.webp" width="640" height="360" loading="lazy"
-             alt="Cup Shuffle on screen"></a>
+        <a class="tvl" href="#lb-cup_shuffle"><img src="thumbs/cup_shuffle.webp" width="640" height="360" loading="lazy"
+             alt="Cup Shuffle on a television"></a>
+        <a class="ph" href="#lbp-cup_shuffle"><img src="phone/thumbs/cup_shuffle.webp" width="300" height="650" loading="lazy"
+             alt="Cup Shuffle on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🥤</span><h3>Cup Shuffle</h3></div>
@@ -56,8 +70,8 @@
             <ul class="bens"><li>👀 Visual tracking</li><li>🧠 Working memory</li><li>🎯 Sustained attention</li><li>🧘 Patience and focus</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Watch the ball hide under a cup</li><li>Track that cup as they shuffle</li><li>D-pad to pick a cup</li><li>Press OK to lift</li><li>Right cup, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Watch the ball hide under a cup</li><li>Track that cup as they shuffle</li><li>D-pad to pick a cup</li><li>Press OK to lift</li><li>Right cup, more ⭐!</li></ol><ol class="steps only-touch"><li>Watch the ball hide under a cup</li><li>Track that cup as they shuffle</li><li>Tap a cup to lift it</li><li>Right cup, more ⭐!</li></ol>
           </div>
         </div>
         
@@ -66,11 +80,16 @@
     <div class="lb" id="lb-cup_shuffle"><a class="x" href="#cup_shuffle">&times;</a>
       <img src="full/cup_shuffle.webp" alt="Cup Shuffle full screenshot">
       <div class="cap">Cup Shuffle — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-cup_shuffle"><a class="x" href="#cup_shuffle">&times;</a>
+      <img src="phone/full/cup_shuffle.webp" alt="Cup Shuffle full phone screenshot">
+      <div class="cap">Cup Shuffle — actual gameplay on a phone</div></div>
 
     <article class="game" id="letter_hunt" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-letter_hunt"><img src="thumbs/letter_hunt.webp" width="640" height="360" loading="lazy"
-             alt="Letter Hunt on screen"></a>
+        <a class="tvl" href="#lb-letter_hunt"><img src="thumbs/letter_hunt.webp" width="640" height="360" loading="lazy"
+             alt="Letter Hunt on a television"></a>
+        <a class="ph" href="#lbp-letter_hunt"><img src="phone/thumbs/letter_hunt.webp" width="300" height="650" loading="lazy"
+             alt="Letter Hunt on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔤</span><h3>Letter Hunt</h3></div>
@@ -86,8 +105,8 @@
             <ul class="bens"><li>🔍 Visual scanning</li><li>🔤 Letter recognition</li><li>🎯 Focus &amp; attention</li><li>⚡ Quick reactions</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the target letter</li><li>D-pad to move the cursor</li><li>Press OK on every match</li><li>Skip the wrong letters</li><li>Find them all, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the target letter</li><li>D-pad to move the cursor</li><li>Press OK on every match</li><li>Skip the wrong letters</li><li>Find them all, more ⭐!</li></ol><ol class="steps only-touch"><li>See the target letter</li><li>Tap every match</li><li>Skip the wrong letters</li><li>Find them all, more ⭐!</li></ol>
           </div>
         </div>
         
@@ -96,11 +115,16 @@
     <div class="lb" id="lb-letter_hunt"><a class="x" href="#letter_hunt">&times;</a>
       <img src="full/letter_hunt.webp" alt="Letter Hunt full screenshot">
       <div class="cap">Letter Hunt — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-letter_hunt"><a class="x" href="#letter_hunt">&times;</a>
+      <img src="phone/full/letter_hunt.webp" alt="Letter Hunt full phone screenshot">
+      <div class="cap">Letter Hunt — actual gameplay on a phone</div></div>
 
     <article class="game" id="word_search" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-word_search"><img src="thumbs/word_search.webp" width="640" height="360" loading="lazy"
-             alt="Word Search on screen"></a>
+        <a class="tvl" href="#lb-word_search"><img src="thumbs/word_search.webp" width="640" height="360" loading="lazy"
+             alt="Word Search on a television"></a>
+        <a class="ph" href="#lbp-word_search"><img src="phone/thumbs/word_search.webp" width="300" height="650" loading="lazy"
+             alt="Word Search on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔎</span><h3>Word Search</h3></div>
@@ -116,8 +140,8 @@
             <ul class="bens"><li>👀 Visual scanning &amp; focus</li><li>🔤 Spelling &amp; letter shapes</li><li>🧠 Patience &amp; pattern spotting</li><li>📚 Themed vocabulary</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the word list</li><li>D-pad to move the box</li><li>Press OK on a word&#x27;s first letter</li><li>Move to its last letter — OK again</li><li>Find them all, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the word list</li><li>D-pad to move the box</li><li>Press OK on a word&#x27;s first letter</li><li>Move to its last letter — OK again</li><li>Find them all, more ⭐!</li></ol><ol class="steps only-touch"><li>Read the word list</li><li>Tap a word&#x27;s first letter</li><li>Tap its last letter</li><li>Find them all, more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Your eyes make tiny jumps called “saccades” as you scan for words.</div>
@@ -126,11 +150,16 @@
     <div class="lb" id="lb-word_search"><a class="x" href="#word_search">&times;</a>
       <img src="full/word_search.webp" alt="Word Search full screenshot">
       <div class="cap">Word Search — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-word_search"><a class="x" href="#word_search">&times;</a>
+      <img src="phone/full/word_search.webp" alt="Word Search full phone screenshot">
+      <div class="cap">Word Search — actual gameplay on a phone</div></div>
 
     <article class="game" id="sudoku" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-sudoku"><img src="thumbs/sudoku.webp" width="640" height="360" loading="lazy"
-             alt="Sudoku on screen"></a>
+        <a class="tvl" href="#lb-sudoku"><img src="thumbs/sudoku.webp" width="640" height="360" loading="lazy"
+             alt="Sudoku on a television"></a>
+        <a class="ph" href="#lbp-sudoku"><img src="phone/thumbs/sudoku.webp" width="300" height="650" loading="lazy"
+             alt="Sudoku on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔢</span><h3>Sudoku</h3></div>
@@ -146,8 +175,8 @@
             <ul class="bens"><li>🧠 Logic &amp; reasoning</li><li>🎯 Focus &amp; patience</li><li>🔢 Number confidence</li><li>🔍 Spotting patterns</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>D-pad to move the box</li><li>Press OK on an empty square</li><li>Pick a number, press OK</li><li>No repeats in a row, column or box</li><li>Fill it all with no reds — more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>D-pad to move the box</li><li>Press OK on an empty square</li><li>Pick a number, press OK</li><li>No repeats in a row, column or box</li><li>Fill it all with no reds — more ⭐!</li></ol><ol class="steps only-touch"><li>Tap an empty square</li><li>Tap the number you want</li><li>No repeats in a row, column or box</li><li>Fill it all with no reds — more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> There are more Sudoku grids than stars you could count — a 6 with 21 zeros!</div>
@@ -156,11 +185,16 @@
     <div class="lb" id="lb-sudoku"><a class="x" href="#sudoku">&times;</a>
       <img src="full/sudoku.webp" alt="Sudoku full screenshot">
       <div class="cap">Sudoku — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-sudoku"><a class="x" href="#sudoku">&times;</a>
+      <img src="phone/full/sudoku.webp" alt="Sudoku full phone screenshot">
+      <div class="cap">Sudoku — actual gameplay on a phone</div></div>
 
     <article class="game" id="light_it_up" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-light_it_up"><img src="thumbs/light_it_up.webp" width="640" height="360" loading="lazy"
-             alt="Light It Up on screen"></a>
+        <a class="tvl" href="#lb-light_it_up"><img src="thumbs/light_it_up.webp" width="640" height="360" loading="lazy"
+             alt="Light It Up on a television"></a>
+        <a class="ph" href="#lbp-light_it_up"><img src="phone/thumbs/light_it_up.webp" width="300" height="650" loading="lazy"
+             alt="Light It Up on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">💡</span><h3>Light It Up</h3></div>
@@ -176,8 +210,8 @@
             <ul class="bens"><li>🧠 Logic &amp; reasoning</li><li>💡 Planning ahead</li><li>🎯 Focus &amp; patience</li><li>🔍 Spotting clues</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>D-pad to move the cursor</li><li>Press OK to place or remove a bulb</li><li>A bulb lights its row &amp; column until a wall</li><li>Two bulbs must never see each other</li><li>Light every square with no reds — more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>D-pad to move the cursor</li><li>Press OK to place or remove a bulb</li><li>A bulb lights its row &amp; column until a wall</li><li>Two bulbs must never see each other</li><li>Light every square with no reds — more ⭐!</li></ol><ol class="steps only-touch"><li>Tap a square to place a bulb — tap again to take it off</li><li>A bulb lights its row &amp; column until a wall</li><li>Two bulbs must never see each other</li><li>Light every square with no reds — more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> This puzzle is called “Akari” in Japan — it means “light”.</div>
@@ -186,11 +220,16 @@
     <div class="lb" id="lb-light_it_up"><a class="x" href="#light_it_up">&times;</a>
       <img src="full/light_it_up.webp" alt="Light It Up full screenshot">
       <div class="cap">Light It Up — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-light_it_up"><a class="x" href="#light_it_up">&times;</a>
+      <img src="phone/full/light_it_up.webp" alt="Light It Up full phone screenshot">
+      <div class="cap">Light It Up — actual gameplay on a phone</div></div>
 
     <article class="game" id="number_link" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-number_link"><img src="thumbs/number_link.webp" width="640" height="360" loading="lazy"
-             alt="Number Link on screen"></a>
+        <a class="tvl" href="#lb-number_link"><img src="thumbs/number_link.webp" width="640" height="360" loading="lazy"
+             alt="Number Link on a television"></a>
+        <a class="ph" href="#lbp-number_link"><img src="phone/thumbs/number_link.webp" width="300" height="650" loading="lazy"
+             alt="Number Link on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">⛓️</span><h3>Number Link</h3></div>
@@ -206,8 +245,8 @@
             <ul class="bens"><li>🧠 Planning ahead</li><li>🧭 Spatial reasoning</li><li>🎯 Focus &amp; patience</li><li>🧩 Trial-and-error logic</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>D-pad to a number, press OK to start its line</li><li>Steer the line with the D-pad — one square at a time</li><li>Reach its matching twin to join the pair</li><li>Lines can&#x27;t cross — plan so they all fit</li><li>Fill every square to win — more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>D-pad to a number, press OK to start its line</li><li>Steer the line with the D-pad — one square at a time</li><li>Reach its matching twin to join the pair</li><li>Lines can&#x27;t cross — plan so they all fit</li><li>Fill every square to win — more ⭐!</li></ol><ol class="steps only-touch"><li>Touch a number and drag to its twin</li><li>Drag back along a line to rub it out</li><li>Reach its matching twin to join the pair</li><li>Lines can&#x27;t cross — plan so they all fit</li><li>Fill every square to win — more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> This kind of puzzle is called a “number link” — join the matching numbers with a line.</div>
@@ -216,11 +255,16 @@
     <div class="lb" id="lb-number_link"><a class="x" href="#number_link">&times;</a>
       <img src="full/number_link.webp" alt="Number Link full screenshot">
       <div class="cap">Number Link — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-number_link"><a class="x" href="#number_link">&times;</a>
+      <img src="phone/full/number_link.webp" alt="Number Link full phone screenshot">
+      <div class="cap">Number Link — actual gameplay on a phone</div></div>
 
     <article class="game" id="twin_finder" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-twin_finder"><img src="thumbs/twin_finder.webp" width="640" height="360" loading="lazy"
-             alt="Twin Finder on screen"></a>
+        <a class="tvl" href="#lb-twin_finder"><img src="thumbs/twin_finder.webp" width="640" height="360" loading="lazy"
+             alt="Twin Finder on a television"></a>
+        <a class="ph" href="#lbp-twin_finder"><img src="phone/thumbs/twin_finder.webp" width="300" height="650" loading="lazy"
+             alt="Twin Finder on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">👯</span><h3>Twin Finder</h3></div>
@@ -236,8 +280,8 @@
             <ul class="bens"><li>👀 Visual pattern matching</li><li>🧠 Working memory</li><li>⚡ Quick scanning</li><li>🎯 Same-vs-different attention</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Look at every emoji</li><li>Find the two that match</li><li>D-pad to move the cursor</li><li>Press OK on each twin</li><li>Fast finds, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Look at every emoji</li><li>Find the two that match</li><li>D-pad to move the cursor</li><li>Press OK on each twin</li><li>Fast finds, more ⭐!</li></ol><ol class="steps only-touch"><li>Look at every emoji</li><li>Find the two that match</li><li>Tap each twin</li><li>Fast finds, more ⭐!</li></ol>
           </div>
         </div>
         
@@ -246,11 +290,16 @@
     <div class="lb" id="lb-twin_finder"><a class="x" href="#twin_finder">&times;</a>
       <img src="full/twin_finder.webp" alt="Twin Finder full screenshot">
       <div class="cap">Twin Finder — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-twin_finder"><a class="x" href="#twin_finder">&times;</a>
+      <img src="phone/full/twin_finder.webp" alt="Twin Finder full phone screenshot">
+      <div class="cap">Twin Finder — actual gameplay on a phone</div></div>
 
     <article class="game" id="spot_difference" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-spot_difference"><img src="thumbs/spot_difference.webp" width="640" height="360" loading="lazy"
-             alt="Spot the Difference on screen"></a>
+        <a class="tvl" href="#lb-spot_difference"><img src="thumbs/spot_difference.webp" width="640" height="360" loading="lazy"
+             alt="Spot the Difference on a television"></a>
+        <a class="ph" href="#lbp-spot_difference"><img src="phone/thumbs/spot_difference.webp" width="300" height="650" loading="lazy"
+             alt="Spot the Difference on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔍</span><h3>Spot the Difference</h3></div>
@@ -266,8 +315,8 @@
             <ul class="bens"><li>🔍 Eye for detail</li><li>👀 Sharper visual scanning</li><li>🧠 Focus and patience</li><li>🎯 Side-by-side comparison</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Look at both pictures</li><li>D-pad to move the cursor</li><li>Press OK on a difference</li><li>Find every change</li><li>Fewer misses, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Look at both pictures</li><li>D-pad to move the cursor</li><li>Press OK on a difference</li><li>Find every change</li><li>Fewer misses, more ⭐!</li></ol><ol class="steps only-touch"><li>Look at both pictures</li><li>Tap a difference in either picture</li><li>Find every change</li><li>Fewer misses, more ⭐!</li></ol>
           </div>
         </div>
         
@@ -276,11 +325,16 @@
     <div class="lb" id="lb-spot_difference"><a class="x" href="#spot_difference">&times;</a>
       <img src="full/spot_difference.webp" alt="Spot the Difference full screenshot">
       <div class="cap">Spot the Difference — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-spot_difference"><a class="x" href="#spot_difference">&times;</a>
+      <img src="phone/full/spot_difference.webp" alt="Spot the Difference full phone screenshot">
+      <div class="cap">Spot the Difference — actual gameplay on a phone</div></div>
 
     <article class="game" id="memory_match" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-memory_match"><img src="thumbs/memory_match.webp" width="640" height="360" loading="lazy"
-             alt="Memory Match on screen"></a>
+        <a class="tvl" href="#lb-memory_match"><img src="thumbs/memory_match.webp" width="640" height="360" loading="lazy"
+             alt="Memory Match on a television"></a>
+        <a class="ph" href="#lbp-memory_match"><img src="phone/thumbs/memory_match.webp" width="300" height="650" loading="lazy"
+             alt="Memory Match on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🃏</span><h3>Memory Match</h3></div>
@@ -296,8 +350,8 @@
             <ul class="bens"><li>🧠 Stronger memory</li><li>👀 Sharper visual recall</li><li>🎯 Better focus</li><li>🌟 Reward for careful play</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>D-pad to move</li><li>Press OK to flip</li><li>Flip another to match</li><li>Find every pair</li><li>Fewer flips, more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>D-pad to move</li><li>Press OK to flip</li><li>Flip another to match</li><li>Find every pair</li><li>Fewer flips, more ⭐!</li></ol><ol class="steps only-touch"><li>Tap a card to flip</li><li>Flip another to match</li><li>Find every pair</li><li>Fewer flips, more ⭐!</li></ol>
           </div>
         </div>
         
@@ -306,11 +360,16 @@
     <div class="lb" id="lb-memory_match"><a class="x" href="#memory_match">&times;</a>
       <img src="full/memory_match.webp" alt="Memory Match full screenshot">
       <div class="cap">Memory Match — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-memory_match"><a class="x" href="#memory_match">&times;</a>
+      <img src="phone/full/memory_match.webp" alt="Memory Match full phone screenshot">
+      <div class="cap">Memory Match — actual gameplay on a phone</div></div>
 
     <article class="game" id="count_along" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-count_along"><img src="thumbs/count_along.webp" width="640" height="360" loading="lazy"
-             alt="Count Along on screen"></a>
+        <a class="tvl" href="#lb-count_along"><img src="thumbs/count_along.webp" width="640" height="360" loading="lazy"
+             alt="Count Along on a television"></a>
+        <a class="ph" href="#lbp-count_along"><img src="phone/thumbs/count_along.webp" width="300" height="650" loading="lazy"
+             alt="Count Along on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🐑</span><h3>Count Along</h3></div>
@@ -326,8 +385,8 @@
             <ul class="bens"><li>👀 Watch closely</li><li>🧠 Hold the number</li><li>🔢 Count as you go</li><li>⏳ Stay with it</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read who to count at the top</li><li>Watch them cross the field</li><li>Count each one as it passes</li><li>◀ ▶ to the right number</li><li>OK to answer for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read who to count at the top</li><li>Watch them cross the field</li><li>Count each one as it passes</li><li>◀ ▶ to the right number</li><li>OK to answer for ⭐!</li></ol><ol class="steps only-touch"><li>Read who to count at the top</li><li>Watch them cross the field</li><li>Count each one as it passes</li><li>Tap the right number for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Counting things that pass is harder than counting things that stay still.</div>
@@ -336,11 +395,16 @@
     <div class="lb" id="lb-count_along"><a class="x" href="#count_along">&times;</a>
       <img src="full/count_along.webp" alt="Count Along full screenshot">
       <div class="cap">Count Along — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-count_along"><a class="x" href="#count_along">&times;</a>
+      <img src="phone/full/count_along.webp" alt="Count Along full phone screenshot">
+      <div class="cap">Count Along — actual gameplay on a phone</div></div>
 
     <article class="game" id="bubble_burst" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-bubble_burst"><img src="thumbs/bubble_burst.webp" width="640" height="360" loading="lazy"
-             alt="Bubble Burst on screen"></a>
+        <a class="tvl" href="#lb-bubble_burst"><img src="thumbs/bubble_burst.webp" width="640" height="360" loading="lazy"
+             alt="Bubble Burst on a television"></a>
+        <a class="ph" href="#lbp-bubble_burst"><img src="phone/thumbs/bubble_burst.webp" width="300" height="650" loading="lazy"
+             alt="Bubble Burst on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🎈</span><h3>Bubble Burst</h3></div>
@@ -349,15 +413,15 @@
           <span class="pill">3 min</span>
           <span class="pill">Medium</span>
         </div>
-        <p class="about">Bubbles float by through the middle of the screen. Press OK to pop the one in the spotlight when it matches the target shape — let the rest float past. The target keeps changing, so stay sharp!</p>
+        <p class="about only-tv">Bubbles float by through the middle of the screen. Press OK to pop the one in the spotlight when it matches the target shape — let the rest float past. The target keeps changing, so stay sharp!</p><p class="about only-touch">Bubbles float by through the middle of the screen. Tap to pop the one in the spotlight when it matches the target shape — let the rest float past. The target keeps changing, so stay sharp!</p>
         <div class="two">
           <div>
             <p class="sub-h">Builds</p>
             <ul class="bens"><li>🎈 Selective attention</li><li>👀 Shape matching</li><li>⚡ Quick reactions</li><li>🛑 Impulse control</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Watch the bubble in the middle</li><li>Press OK to pop a match</li><li>Let the others float by</li><li>The target shape changes</li><li>Clean pops earn more ⭐</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Watch the bubble in the middle</li><li>Press OK to pop a match</li><li>Let the others float by</li><li>The target shape changes</li><li>Clean pops earn more ⭐</li></ol><ol class="steps only-touch"><li>Watch the bubble in the middle</li><li>Tap to pop a match</li><li>Let the others float by</li><li>The target shape changes</li><li>Clean pops earn more ⭐</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> A bubble&#x27;s perfect round shape is its lowest-energy form.</div>
@@ -366,11 +430,16 @@
     <div class="lb" id="lb-bubble_burst"><a class="x" href="#bubble_burst">&times;</a>
       <img src="full/bubble_burst.webp" alt="Bubble Burst full screenshot">
       <div class="cap">Bubble Burst — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-bubble_burst"><a class="x" href="#bubble_burst">&times;</a>
+      <img src="phone/full/bubble_burst.webp" alt="Bubble Burst full phone screenshot">
+      <div class="cap">Bubble Burst — actual gameplay on a phone</div></div>
 
     <article class="game" id="spotlight_search" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-spotlight_search"><img src="thumbs/spotlight_search.webp" width="640" height="360" loading="lazy"
-             alt="Spotlight Search on screen"></a>
+        <a class="tvl" href="#lb-spotlight_search"><img src="thumbs/spotlight_search.webp" width="640" height="360" loading="lazy"
+             alt="Spotlight Search on a television"></a>
+        <a class="ph" href="#lbp-spotlight_search"><img src="phone/thumbs/spotlight_search.webp" width="300" height="650" loading="lazy"
+             alt="Spotlight Search on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔦</span><h3>Spotlight Search</h3></div>
@@ -379,15 +448,15 @@
           <span class="pill">3 min</span>
           <span class="pill">Medium</span>
         </div>
-        <p class="about">Most of the screen is dark. Move the spotlight with the D-pad and press OK on each target you uncover.</p>
+        <p class="about only-tv">Most of the screen is dark. Move the spotlight with the D-pad and press OK on each target you uncover.</p><p class="about only-touch">Most of the screen is dark. Move the spotlight by swiping and tap on each target you uncover.</p>
         <div class="two">
           <div>
             <p class="sub-h">Builds</p>
             <ul class="bens"><li>🔦 Spatial search</li><li>🧭 Systematic scanning</li><li>🎯 Sustained attention</li><li>⚡ Quick reactions</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Move the spotlight</li><li>Spot a target — press OK</li><li>Sweep edge to edge</li><li>Find them all in the round</li><li>Clean sweeps earn more ⭐</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Move the spotlight</li><li>Spot a target — press OK</li><li>Sweep edge to edge</li><li>Find them all in the round</li><li>Clean sweeps earn more ⭐</li></ol><ol class="steps only-touch"><li>Drag to move the spotlight</li><li>Spot a target — tap it</li><li>Sweep edge to edge</li><li>Find them all in the round</li><li>Clean sweeps earn more ⭐</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Owls can spot a mouse 100 m away in pitch dark.</div>
@@ -396,11 +465,16 @@
     <div class="lb" id="lb-spotlight_search"><a class="x" href="#spotlight_search">&times;</a>
       <img src="full/spotlight_search.webp" alt="Spotlight Search full screenshot">
       <div class="cap">Spotlight Search — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-spotlight_search"><a class="x" href="#spotlight_search">&times;</a>
+      <img src="phone/full/spotlight_search.webp" alt="Spotlight Search full phone screenshot">
+      <div class="cap">Spotlight Search — actual gameplay on a phone</div></div>
 
     <article class="game" id="conjunction_search" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-conjunction_search"><img src="thumbs/conjunction_search.webp" width="640" height="360" loading="lazy"
-             alt="Conjunction Search on screen"></a>
+        <a class="tvl" href="#lb-conjunction_search"><img src="thumbs/conjunction_search.webp" width="640" height="360" loading="lazy"
+             alt="Conjunction Search on a television"></a>
+        <a class="ph" href="#lbp-conjunction_search"><img src="phone/thumbs/conjunction_search.webp" width="300" height="650" loading="lazy"
+             alt="Conjunction Search on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🎯</span><h3>Conjunction Search</h3></div>
@@ -416,8 +490,8 @@
             <ul class="bens"><li>🎯 Focused search</li><li>👀 Two things at once</li><li>🧠 Beat distractions</li><li>⏳ Patient scanning</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the FIND bar at the top</li><li>◀ ▶ ▲ ▼ to move around</li><li>Look for BOTH the colour and shape</li><li>OK on the one that matches both</li><li>Find all 5 for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the FIND bar at the top</li><li>◀ ▶ ▲ ▼ to move around</li><li>Look for BOTH the colour and shape</li><li>OK on the one that matches both</li><li>Find all 5 for ⭐!</li></ol><ol class="steps only-touch"><li>Read the FIND bar at the top</li><li>Look for BOTH the colour and shape</li><li>Tap the one that matches both</li><li>Find all 5 for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Your eyes spot one colour instantly — but two things together take real hunting.</div>
@@ -426,11 +500,16 @@
     <div class="lb" id="lb-conjunction_search"><a class="x" href="#conjunction_search">&times;</a>
       <img src="full/conjunction_search.webp" alt="Conjunction Search full screenshot">
       <div class="cap">Conjunction Search — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-conjunction_search"><a class="x" href="#conjunction_search">&times;</a>
+      <img src="phone/full/conjunction_search.webp" alt="Conjunction Search full phone screenshot">
+      <div class="cap">Conjunction Search — actual gameplay on a phone</div></div>
 
     <article class="game" id="trail_tracer" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-trail_tracer"><img src="thumbs/trail_tracer.webp" width="640" height="360" loading="lazy"
-             alt="Trail Tracer on screen"></a>
+        <a class="tvl" href="#lb-trail_tracer"><img src="thumbs/trail_tracer.webp" width="640" height="360" loading="lazy"
+             alt="Trail Tracer on a television"></a>
+        <a class="ph" href="#lbp-trail_tracer"><img src="phone/thumbs/trail_tracer.webp" width="300" height="650" loading="lazy"
+             alt="Trail Tracer on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🪢</span><h3>Trail Tracer</h3></div>
@@ -446,8 +525,8 @@
             <ul class="bens"><li>🧠 Real-world matching</li><li>🎯 Focused attention</li><li>🧩 Pattern thinking</li><li>🪢 Making connections</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the glowing picture</li><li>D-pad up/down to its match</li><li>Press OK to draw the trail</li><li>Right match locks in green</li><li>Wrong match · trail melts away</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the glowing picture</li><li>D-pad up/down to its match</li><li>Press OK to draw the trail</li><li>Right match locks in green</li><li>Wrong match · trail melts away</li></ol><ol class="steps only-touch"><li>Drag each picture to its match, in any order</li><li>Right match locks in green</li><li>Wrong match · trail melts away</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Rabbits love crunchy carrots more than candy.</div>
@@ -456,11 +535,16 @@
     <div class="lb" id="lb-trail_tracer"><a class="x" href="#trail_tracer">&times;</a>
       <img src="full/trail_tracer.webp" alt="Trail Tracer full screenshot">
       <div class="cap">Trail Tracer — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-trail_tracer"><a class="x" href="#trail_tracer">&times;</a>
+      <img src="phone/full/trail_tracer.webp" alt="Trail Tracer full phone screenshot">
+      <div class="cap">Trail Tracer — actual gameplay on a phone</div></div>
 
     <article class="game" id="sort_sprint" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-sort_sprint"><img src="thumbs/sort_sprint.webp" width="640" height="360" loading="lazy"
-             alt="Sort Sprint on screen"></a>
+        <a class="tvl" href="#lb-sort_sprint"><img src="thumbs/sort_sprint.webp" width="640" height="360" loading="lazy"
+             alt="Sort Sprint on a television"></a>
+        <a class="ph" href="#lbp-sort_sprint"><img src="phone/thumbs/sort_sprint.webp" width="300" height="650" loading="lazy"
+             alt="Sort Sprint on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🗂️</span><h3>Sort Sprint</h3></div>
@@ -469,15 +553,15 @@
           <span class="pill">3 min</span>
           <span class="pill">Medium</span>
         </div>
-        <p class="about">An item pops up at the centre. Press the D-pad to send it to the matching bin — get the whole set sorted before the clock runs out!</p>
+        <p class="about only-tv">An item pops up at the centre. Press the D-pad to send it to the matching bin — get the whole set sorted before the clock runs out!</p><p class="about only-touch">An item pops up at the centre. Swipe toward the matching bin — get the whole set sorted before the clock runs out!</p>
         <div class="two">
           <div>
             <p class="sub-h">Builds</p>
             <ul class="bens"><li>⚡ Quick decision-making</li><li>🧠 Category recognition</li><li>🎯 Focus under time pressure</li><li>👀 Visual sorting speed</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Watch the bins around you</li><li>An item pops in the middle</li><li>Press the D-pad to send it</li><li>Right bin, and it counts ✨</li><li>Finish the set before time</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Watch the bins around you</li><li>An item pops in the middle</li><li>Press the D-pad to send it</li><li>Right bin, and it counts ✨</li><li>Finish the set before time</li></ol><ol class="steps only-touch"><li>Watch the bins around you</li><li>An item pops in the middle</li><li>Swipe toward its bin</li><li>Right bin, and it counts ✨</li><li>Finish the set before time</li></ol>
           </div>
         </div>
         
@@ -486,11 +570,16 @@
     <div class="lb" id="lb-sort_sprint"><a class="x" href="#sort_sprint">&times;</a>
       <img src="full/sort_sprint.webp" alt="Sort Sprint full screenshot">
       <div class="cap">Sort Sprint — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-sort_sprint"><a class="x" href="#sort_sprint">&times;</a>
+      <img src="phone/full/sort_sprint.webp" alt="Sort Sprint full phone screenshot">
+      <div class="cap">Sort Sprint — actual gameplay on a phone</div></div>
 
     <article class="game" id="color_catch" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-color_catch"><img src="thumbs/color_catch.webp" width="640" height="360" loading="lazy"
-             alt="Color Catch on screen"></a>
+        <a class="tvl" href="#lb-color_catch"><img src="thumbs/color_catch.webp" width="640" height="360" loading="lazy"
+             alt="Color Catch on a television"></a>
+        <a class="ph" href="#lbp-color_catch"><img src="phone/thumbs/color_catch.webp" width="300" height="650" loading="lazy"
+             alt="Color Catch on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🎨</span><h3>Color Catch</h3></div>
@@ -499,15 +588,15 @@
           <span class="pill">2 min</span>
           <span class="pill">Medium</span>
         </div>
-        <p class="about">Watch colours flash one by one. Press OK on the target — skip the rest. Quick eyes win.</p>
+        <p class="about only-tv">Watch colours flash one by one. Press OK on the target — skip the rest. Quick eyes win.</p><p class="about only-touch">Watch colours flash one by one. Tap the target — skip the rest. Quick eyes win.</p>
         <div class="two">
           <div>
             <p class="sub-h">Builds</p>
             <ul class="bens"><li>🎨 Colour recognition</li><li>👀 Sharper attention</li><li>⚡ Faster reactions</li><li>🧠 Better self-control</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the target colour</li><li>Watch colours flash by</li><li>Press OK on a match</li><li>Skip the wrong ones</li><li>Beat the clock for stars</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the target colour</li><li>Watch colours flash by</li><li>Press OK on a match</li><li>Skip the wrong ones</li><li>Beat the clock for stars</li></ol><ol class="steps only-touch"><li>See the target colour</li><li>Watch colours flash by</li><li>Tap a match</li><li>Skip the wrong ones</li><li>Beat the clock for stars</li></ol>
           </div>
         </div>
         
@@ -516,11 +605,16 @@
     <div class="lb" id="lb-color_catch"><a class="x" href="#color_catch">&times;</a>
       <img src="full/color_catch.webp" alt="Color Catch full screenshot">
       <div class="cap">Color Catch — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-color_catch"><a class="x" href="#color_catch">&times;</a>
+      <img src="phone/full/color_catch.webp" alt="Color Catch full phone screenshot">
+      <div class="cap">Color Catch — actual gameplay on a phone</div></div>
 
     <article class="game" id="simon_orders" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-simon_orders"><img src="thumbs/simon_orders.webp" width="640" height="360" loading="lazy"
-             alt="Simon&#x27;s Orders on screen"></a>
+        <a class="tvl" href="#lb-simon_orders"><img src="thumbs/simon_orders.webp" width="640" height="360" loading="lazy"
+             alt="Simon&#x27;s Orders on a television"></a>
+        <a class="ph" href="#lbp-simon_orders"><img src="phone/thumbs/simon_orders.webp" width="300" height="650" loading="lazy"
+             alt="Simon&#x27;s Orders on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🫡</span><h3>Simon&#x27;s Orders</h3></div>
@@ -529,15 +623,15 @@
           <span class="pill">3 min</span>
           <span class="pill">Medium</span>
         </div>
-        <p class="about">A voice calls out a move — Jump, Duck, Lean left, Lean right — and you do it with the D-pad arrow. But ONLY when it starts with “Simon says”! If Simon didn&#x27;t say it, freeze and don&#x27;t press.</p>
+        <p class="about only-tv">A voice calls out a move — Jump, Duck, Lean left, Lean right — and you do it with the D-pad arrow. But ONLY when it starts with “Simon says”! If Simon didn&#x27;t say it, freeze and don&#x27;t press.</p><p class="about only-touch">A voice calls out a move — Jump, Duck, Lean left, Lean right — and you do it by swiping. But ONLY when it starts with “Simon says”! If Simon didn&#x27;t say it, freeze and don&#x27;t swipe.</p>
         <div class="two">
           <div>
             <p class="sub-h">Builds</p>
             <ul class="bens"><li>🧠 Impulse control</li><li>👂 Careful listening</li><li>⚡ Quick reactions</li><li>🎯 Focus</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Listen and watch for the command</li><li>▲ Jump · ▼ Duck · ◀ Lean left · ▶ Lean right</li><li>Press the arrow ONLY if it said “Simon says”</li><li>No “Simon says”? Freeze — don&#x27;t press!</li><li>Fewer slips = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Listen and watch for the command</li><li>▲ Jump · ▼ Duck · ◀ Lean left · ▶ Lean right</li><li>Press the arrow ONLY if it said “Simon says”</li><li>No “Simon says”? Freeze — don&#x27;t press!</li><li>Fewer slips = more ⭐!</li></ol><ol class="steps only-touch"><li>Listen and watch for the command</li><li>Swipe up to Jump · down to Duck · left or right to Lean</li><li>Swipe ONLY if it said “Simon says”</li><li>No “Simon says”? Freeze — don&#x27;t swipe!</li><li>Fewer slips = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Stopping yourself from acting is called impulse control — a real superpower for your brain.</div>
@@ -546,11 +640,16 @@
     <div class="lb" id="lb-simon_orders"><a class="x" href="#simon_orders">&times;</a>
       <img src="full/simon_orders.webp" alt="Simon&#x27;s Orders full screenshot">
       <div class="cap">Simon&#x27;s Orders — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-simon_orders"><a class="x" href="#simon_orders">&times;</a>
+      <img src="phone/full/simon_orders.webp" alt="Simon&#x27;s Orders full phone screenshot">
+      <div class="cap">Simon&#x27;s Orders — actual gameplay on a phone</div></div>
 
     <article class="game" id="name_game" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-name_game"><img src="thumbs/name_game.webp" width="640" height="360" loading="lazy"
-             alt="Name Game on screen"></a>
+        <a class="tvl" href="#lb-name_game"><img src="thumbs/name_game.webp" width="640" height="360" loading="lazy"
+             alt="Name Game on a television"></a>
+        <a class="ph" href="#lbp-name_game"><img src="phone/thumbs/name_game.webp" width="300" height="650" loading="lazy"
+             alt="Name Game on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">👋</span><h3>Name Game</h3></div>
@@ -566,8 +665,8 @@
             <ul class="bens"><li>🧠 Memory power</li><li>👀 Face attention</li><li>🔗 Name-face linking</li><li>😊 Everyday skill</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Study the friends — say each name in your head</li><li>Press OK when you&#x27;re ready</li><li>A face returns — pick their name</li><li>D-pad to a name, OK to answer</li><li>Remember them all for more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Study the friends — say each name in your head</li><li>Press OK when you&#x27;re ready</li><li>A face returns — pick their name</li><li>D-pad to a name, OK to answer</li><li>Remember them all for more ⭐!</li></ol><ol class="steps only-touch"><li>Study the friends — say each name in your head</li><li>Tap when you are ready</li><li>A face returns — pick their name</li><li>Tap the name</li><li>Remember them all for more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Linking a name to a face is a skill grown-ups use every day.</div>
@@ -576,11 +675,16 @@
     <div class="lb" id="lb-name_game"><a class="x" href="#name_game">&times;</a>
       <img src="full/name_game.webp" alt="Name Game full screenshot">
       <div class="cap">Name Game — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-name_game"><a class="x" href="#name_game">&times;</a>
+      <img src="phone/full/name_game.webp" alt="Name Game full phone screenshot">
+      <div class="cap">Name Game — actual gameplay on a phone</div></div>
 
     <article class="game" id="shopping_list" style="--ma:#3CE6C9">
       <figure>
-        <a href="#lb-shopping_list"><img src="thumbs/shopping_list.webp" width="640" height="360" loading="lazy"
-             alt="Shopping List on screen"></a>
+        <a class="tvl" href="#lb-shopping_list"><img src="thumbs/shopping_list.webp" width="640" height="360" loading="lazy"
+             alt="Shopping List on a television"></a>
+        <a class="ph" href="#lbp-shopping_list"><img src="phone/thumbs/shopping_list.webp" width="300" height="650" loading="lazy"
+             alt="Shopping List on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🛒</span><h3>Shopping List</h3></div>
@@ -596,8 +700,8 @@
             <ul class="bens"><li>🧠 List memory</li><li>🛒 Everyday skill</li><li>👀 Careful looking</li><li>✅ Recall practice</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Study your shopping list — say each item</li><li>Press OK when you&#x27;ve remembered it</li><li>D-pad around the shelf, OK to tick an item</li><li>Pick only the ones from your list, then Done</li><li>The whole list, no extras = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Study your shopping list — say each item</li><li>Press OK when you&#x27;ve remembered it</li><li>D-pad around the shelf, OK to tick an item</li><li>Pick only the ones from your list, then Done</li><li>The whole list, no extras = more ⭐!</li></ol><ol class="steps only-touch"><li>Study your shopping list — say each item</li><li>Tap when you have remembered it</li><li>Tap each item from your list</li><li>Pick only the ones from your list, then Done</li><li>The whole list, no extras = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Grouping items (fruits, snacks, drinks) helps you remember more.</div>
@@ -606,11 +710,15 @@
     <div class="lb" id="lb-shopping_list"><a class="x" href="#shopping_list">&times;</a>
       <img src="full/shopping_list.webp" alt="Shopping List full screenshot">
       <div class="cap">Shopping List — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-shopping_list"><a class="x" href="#shopping_list">&times;</a>
+      <img src="phone/full/shopping_list.webp" alt="Shopping List full phone screenshot">
+      <div class="cap">Shopping List — actual gameplay on a phone</div></div>
 </div><div class="mnav"><span></span><a href="story_builder.html">Story Builder →</a></div></div>
 <footer><div class="wrap fgrid">
-  <div>
+  <div style="max-width:54ch">
     <div style="font-family:Fraunces,serif;font-weight:600;color:#E3E2E9;margin-bottom:6px">BrainPlay</div>
-    A learning arcade for Android TV. Made for the sofa, the remote and one curious child at a time.
+    A learning arcade for Android TV, phones and tablets. Made for the sofa, the remote, small fingers and
+    one curious child at a time.
   </div>
   <div>
     <a href="https://play.google.com/store/apps/details?id=com.mahesh.brainplay">Get BrainPlay on Google Play</a><br>

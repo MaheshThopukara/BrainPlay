@@ -8,7 +8,7 @@
 <meta property="og:title" content="Social Star — BrainPlay">
 <meta property="og:description" content="Faces, feelings, manners. Builds empathy, perspective-taking, kindness and everyday conversation skills.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/feature.png">
+<meta property="og:image" content="https://maheshthopukara.github.io/BrainPlay/assets/feature.png">
 <meta name="theme-color" content="#0E0F13">
 <link rel="icon" href="../assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="../index.html"><img src="../assets/icon.png" alt="">BrainPlay</a>
   <div class="nav-sp"></div>
+  <a class="lnk" href="../index.html#screens">Every screen</a>
   <a class="lnk" href="../index.html#worlds">Worlds</a>
   <a class="lnk" href="../index.html#how">How it works</a>
   <a class="lnk" href="../index.html#grownups">For grown-ups</a>
@@ -28,6 +29,14 @@
      style="color:var(--accent);font-weight:600">Get the app ↗</a>
 </div></header>
 
+<input class="ctl" type="radio" name="ctl" id="ctl-tv" value="tv" checked>
+<input class="ctl" type="radio" name="ctl" id="ctl-touch" value="touch">
+<script>
+(function(){var k=null;try{k=localStorage.getItem('bp-controls')}catch(_){}
+if(k!=='tv'&&k!=='touch'){k=matchMedia('(pointer:coarse)').matches?'touch':'tv'}
+document.getElementById('ctl-'+k).checked=true;
+document.addEventListener('change',function(ev){if(ev.target.name==='ctl'){try{localStorage.setItem('bp-controls',ev.target.value)}catch(_){}}});})();
+</script>
 <div class="wrap mhead" style="--ma:#FF7BA9">
   <a class="back" href="../index.html#worlds">← All worlds</a>
   <div class="em">🤝</div>
@@ -35,12 +44,17 @@
   <h1>Social Star</h1>
   <p class="lede">Faces, feelings, manners. Builds empathy, perspective-taking, kindness and everyday conversation skills.</p>
   <p class="mute" style="font-size:.88rem">13 games · in the order we'd teach them</p>
+  <div class="ctlrow">How to play, for
+    <span class="ctlbar"><label for="ctl-tv">📺 TV remote</label><label for="ctl-touch">👆 Touch screen</label></span>
+  </div>
 </div>
 <div class="wrap"><div class="games" style="--ma:#FF7BA9">
     <article class="game" id="face_match" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-face_match"><img src="thumbs/face_match.webp" width="640" height="360" loading="lazy"
-             alt="Face Match on screen"></a>
+        <a class="tvl" href="#lb-face_match"><img src="thumbs/face_match.webp" width="640" height="360" loading="lazy"
+             alt="Face Match on a television"></a>
+        <a class="ph" href="#lbp-face_match"><img src="phone/thumbs/face_match.webp" width="300" height="650" loading="lazy"
+             alt="Face Match on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">😊</span><h3>Face Match</h3></div>
@@ -56,8 +70,8 @@
             <ul class="bens"><li>😊 Emotion words</li><li>👀 Face reading</li><li>🧠 Word-emotion link</li><li>💬 Self-aware</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the feeling word</li><li>Look at each face</li><li>D-pad to pick a match</li><li>Press OK to confirm</li><li>Look at the eyes and the mouth</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the feeling word</li><li>Look at each face</li><li>D-pad to pick a match</li><li>Press OK to confirm</li><li>Look at the eyes and the mouth</li></ol><ol class="steps only-touch"><li>Read the feeling word</li><li>Look at each face</li><li>Tap the face that matches</li><li>Look at the eyes and the mouth</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Faces show 7 universal emotions worldwide.</div>
@@ -66,11 +80,16 @@
     <div class="lb" id="lb-face_match"><a class="x" href="#face_match">&times;</a>
       <img src="full/face_match.webp" alt="Face Match full screenshot">
       <div class="cap">Face Match — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-face_match"><a class="x" href="#face_match">&times;</a>
+      <img src="phone/full/face_match.webp" alt="Face Match full phone screenshot">
+      <div class="cap">Face Match — actual gameplay on a phone</div></div>
 
     <article class="game" id="emotion_detective" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-emotion_detective"><img src="thumbs/emotion_detective.webp" width="640" height="360" loading="lazy"
-             alt="Emotion Detective on screen"></a>
+        <a class="tvl" href="#lb-emotion_detective"><img src="thumbs/emotion_detective.webp" width="640" height="360" loading="lazy"
+             alt="Emotion Detective on a television"></a>
+        <a class="ph" href="#lbp-emotion_detective"><img src="phone/thumbs/emotion_detective.webp" width="300" height="650" loading="lazy"
+             alt="Emotion Detective on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">😊</span><h3>Emotion Detective</h3></div>
@@ -86,8 +105,8 @@
             <ul class="bens"><li>😊 Emotion literacy</li><li>👀 Face reading</li><li>🧠 Empathy growth</li><li>💬 Self-expression</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Watch the scene</li><li>Read the face + body</li><li>D-pad to pick feeling</li><li>Press OK to confirm</li><li>The body says it without words</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Watch the scene</li><li>Read the face + body</li><li>D-pad to pick feeling</li><li>Press OK to confirm</li><li>The body says it without words</li></ol><ol class="steps only-touch"><li>Watch the scene</li><li>Read the face + body</li><li>Tap the right feeling</li><li>The body says it without words</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Humans recognise 7 main emotions across all cultures.</div>
@@ -96,11 +115,16 @@
     <div class="lb" id="lb-emotion_detective"><a class="x" href="#emotion_detective">&times;</a>
       <img src="full/emotion_detective.webp" alt="Emotion Detective full screenshot">
       <div class="cap">Emotion Detective — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-emotion_detective"><a class="x" href="#emotion_detective">&times;</a>
+      <img src="phone/full/emotion_detective.webp" alt="Emotion Detective full phone screenshot">
+      <div class="cap">Emotion Detective — actual gameplay on a phone</div></div>
 
     <article class="game" id="body_talk" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-body_talk"><img src="thumbs/body_talk.webp" width="640" height="360" loading="lazy"
-             alt="Body Talk on screen"></a>
+        <a class="tvl" href="#lb-body_talk"><img src="thumbs/body_talk.webp" width="640" height="360" loading="lazy"
+             alt="Body Talk on a television"></a>
+        <a class="ph" href="#lbp-body_talk"><img src="phone/thumbs/body_talk.webp" width="300" height="650" loading="lazy"
+             alt="Body Talk on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🧍</span><h3>Body Talk</h3></div>
@@ -116,8 +140,8 @@
             <ul class="bens"><li>🧍 Non-verbal cues</li><li>👀 Body reading</li><li>🧠 Empathy growth</li><li>💬 Social insight</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Look at the figure</li><li>Notice posture + arms</li><li>D-pad to pick meaning</li><li>Press OK to confirm</li><li>The body says it without words</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Look at the figure</li><li>Notice posture + arms</li><li>D-pad to pick meaning</li><li>Press OK to confirm</li><li>The body says it without words</li></ol><ol class="steps only-touch"><li>Look at the figure</li><li>Notice posture + arms</li><li>Tap what the body is saying</li><li>The body says it without words</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Body language carries half of what we say.</div>
@@ -126,11 +150,16 @@
     <div class="lb" id="lb-body_talk"><a class="x" href="#body_talk">&times;</a>
       <img src="full/body_talk.webp" alt="Body Talk full screenshot">
       <div class="cap">Body Talk — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-body_talk"><a class="x" href="#body_talk">&times;</a>
+      <img src="phone/full/body_talk.webp" alt="Body Talk full phone screenshot">
+      <div class="cap">Body Talk — actual gameplay on a phone</div></div>
 
     <article class="game" id="read_the_room" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-read_the_room"><img src="thumbs/read_the_room.webp" width="640" height="360" loading="lazy"
-             alt="Read the Room on screen"></a>
+        <a class="tvl" href="#lb-read_the_room"><img src="thumbs/read_the_room.webp" width="640" height="360" loading="lazy"
+             alt="Read the Room on a television"></a>
+        <a class="ph" href="#lbp-read_the_room"><img src="phone/thumbs/read_the_room.webp" width="300" height="650" loading="lazy"
+             alt="Read the Room on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">👥</span><h3>Read the Room</h3></div>
@@ -146,8 +175,8 @@
             <ul class="bens"><li>👥 Group reading</li><li>👀 Face scanning</li><li>🧠 Social attention</li><li>🎯 Quick spot</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Scan the group</li><li>Find the different face</li><li>D-pad to point</li><li>Press OK to lock</li><li>Right pick = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Scan the group</li><li>Find the different face</li><li>D-pad to point</li><li>Press OK to lock</li><li>Right pick = stars!</li></ol><ol class="steps only-touch"><li>Scan the group</li><li>Find the different face</li><li>Tap it when you spot it</li><li>Right pick = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Sensitive friends notice the odd-one-out fast.</div>
@@ -156,11 +185,16 @@
     <div class="lb" id="lb-read_the_room"><a class="x" href="#read_the_room">&times;</a>
       <img src="full/read_the_room.webp" alt="Read the Room full screenshot">
       <div class="cap">Read the Room — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-read_the_room"><a class="x" href="#read_the_room">&times;</a>
+      <img src="phone/full/read_the_room.webp" alt="Read the Room full phone screenshot">
+      <div class="cap">Read the Room — actual gameplay on a phone</div></div>
 
     <article class="game" id="big_feels" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-big_feels"><img src="thumbs/big_feels.webp" width="640" height="360" loading="lazy"
-             alt="Big Feels on screen"></a>
+        <a class="tvl" href="#lb-big_feels"><img src="thumbs/big_feels.webp" width="640" height="360" loading="lazy"
+             alt="Big Feels on a television"></a>
+        <a class="ph" href="#lbp-big_feels"><img src="phone/thumbs/big_feels.webp" width="300" height="650" loading="lazy"
+             alt="Big Feels on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🌬️</span><h3>Big Feels</h3></div>
@@ -176,8 +210,8 @@
             <ul class="bens"><li>🌬️ Self-regulation</li><li>🧠 Coping skills</li><li>💛 Self-care</li><li>🫂 Inner peace</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Feel the big emotion</li><li>See three options</li><li>Pick the healthiest</li><li>Press OK to try it</li><li>Healthy = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Feel the big emotion</li><li>See three options</li><li>Pick the healthiest</li><li>Press OK to try it</li><li>Healthy = stars!</li></ol><ol class="steps only-touch"><li>Feel the big emotion</li><li>See three options</li><li>Pick the healthiest</li><li>Healthy = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Deep breaths actually calm your body down — science!</div>
@@ -186,11 +220,16 @@
     <div class="lb" id="lb-big_feels"><a class="x" href="#big_feels">&times;</a>
       <img src="full/big_feels.webp" alt="Big Feels full screenshot">
       <div class="cap">Big Feels — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-big_feels"><a class="x" href="#big_feels">&times;</a>
+      <img src="phone/full/big_feels.webp" alt="Big Feels full phone screenshot">
+      <div class="cap">Big Feels — actual gameplay on a phone</div></div>
 
     <article class="game" id="mind_manners" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-mind_manners"><img src="thumbs/mind_manners.webp" width="640" height="360" loading="lazy"
-             alt="Mind Manners on screen"></a>
+        <a class="tvl" href="#lb-mind_manners"><img src="thumbs/mind_manners.webp" width="640" height="360" loading="lazy"
+             alt="Mind Manners on a television"></a>
+        <a class="ph" href="#lbp-mind_manners"><img src="phone/thumbs/mind_manners.webp" width="300" height="650" loading="lazy"
+             alt="Mind Manners on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🌸</span><h3>Mind Manners</h3></div>
@@ -206,8 +245,8 @@
             <ul class="bens"><li>🌸 Polite habits</li><li>🤝 Manners</li><li>💬 Social skills</li><li>💛 Kindness</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the situation</li><li>Think &#x27;what&#x27;s polite?&#x27;</li><li>Pick the kind reply</li><li>Press OK to lock</li><li>Polite = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the situation</li><li>Think &#x27;what&#x27;s polite?&#x27;</li><li>Pick the kind reply</li><li>Press OK to lock</li><li>Polite = stars!</li></ol><ol class="steps only-touch"><li>Read the situation</li><li>Think &#x27;what&#x27;s polite?&#x27;</li><li>Pick the kind reply</li><li>Polite = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Good manners are taught in every culture.</div>
@@ -216,11 +255,16 @@
     <div class="lb" id="lb-mind_manners"><a class="x" href="#mind_manners">&times;</a>
       <img src="full/mind_manners.webp" alt="Mind Manners full screenshot">
       <div class="cap">Mind Manners — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-mind_manners"><a class="x" href="#mind_manners">&times;</a>
+      <img src="phone/full/mind_manners.webp" alt="Mind Manners full phone screenshot">
+      <div class="cap">Mind Manners — actual gameplay on a phone</div></div>
 
     <article class="game" id="compliment_picker" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-compliment_picker"><img src="thumbs/compliment_picker.webp" width="640" height="360" loading="lazy"
-             alt="Compliment Picker on screen"></a>
+        <a class="tvl" href="#lb-compliment_picker"><img src="thumbs/compliment_picker.webp" width="640" height="360" loading="lazy"
+             alt="Compliment Picker on a television"></a>
+        <a class="ph" href="#lbp-compliment_picker"><img src="phone/thumbs/compliment_picker.webp" width="300" height="650" loading="lazy"
+             alt="Compliment Picker on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🌟</span><h3>Compliment Picker</h3></div>
@@ -236,8 +280,8 @@
             <ul class="bens"><li>🌟 Kind speech</li><li>💛 Friendship skill</li><li>💬 Word choice</li><li>🧠 Empathy</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the scene</li><li>Imagine the friend</li><li>Pick the warmest line</li><li>Press OK to give</li><li>Kindest = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the scene</li><li>Imagine the friend</li><li>Pick the warmest line</li><li>Press OK to give</li><li>Kindest = stars!</li></ol><ol class="steps only-touch"><li>Read the scene</li><li>Imagine the friend</li><li>Pick the warmest line</li><li>Kindest = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> A real compliment is specific — not just &#x27;cool!&#x27;</div>
@@ -246,11 +290,16 @@
     <div class="lb" id="lb-compliment_picker"><a class="x" href="#compliment_picker">&times;</a>
       <img src="full/compliment_picker.webp" alt="Compliment Picker full screenshot">
       <div class="cap">Compliment Picker — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-compliment_picker"><a class="x" href="#compliment_picker">&times;</a>
+      <img src="phone/full/compliment_picker.webp" alt="Compliment Picker full phone screenshot">
+      <div class="cap">Compliment Picker — actual gameplay on a phone</div></div>
 
     <article class="game" id="kind_or_unkind" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-kind_or_unkind"><img src="thumbs/kind_or_unkind.webp" width="640" height="360" loading="lazy"
-             alt="Kind or Unkind? on screen"></a>
+        <a class="tvl" href="#lb-kind_or_unkind"><img src="thumbs/kind_or_unkind.webp" width="640" height="360" loading="lazy"
+             alt="Kind or Unkind? on a television"></a>
+        <a class="ph" href="#lbp-kind_or_unkind"><img src="phone/thumbs/kind_or_unkind.webp" width="300" height="650" loading="lazy"
+             alt="Kind or Unkind? on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">💛</span><h3>Kind or Unkind?</h3></div>
@@ -266,8 +315,8 @@
             <ul class="bens"><li>💛 Right and wrong</li><li>🧠 Judgement</li><li>🤝 Empathy</li><li>🔎 Weighing reasons</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read what happened</li><li>Read every card</li><li>Kind or unkind — and why?</li><li>D-pad to a card, press OK</li><li>Right calls win stars</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read what happened</li><li>Read every card</li><li>Kind or unkind — and why?</li><li>D-pad to a card, press OK</li><li>Right calls win stars</li></ol><ol class="steps only-touch"><li>Read what happened</li><li>Read every card</li><li>Kind or unkind — and why?</li><li>Tap the card that gets it right</li><li>Right calls win stars</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Kindness lights up your brain&#x27;s reward centre.</div>
@@ -276,11 +325,16 @@
     <div class="lb" id="lb-kind_or_unkind"><a class="x" href="#kind_or_unkind">&times;</a>
       <img src="full/kind_or_unkind.webp" alt="Kind or Unkind? full screenshot">
       <div class="cap">Kind or Unkind? — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-kind_or_unkind"><a class="x" href="#kind_or_unkind">&times;</a>
+      <img src="phone/full/kind_or_unkind.webp" alt="Kind or Unkind? full phone screenshot">
+      <div class="cap">Kind or Unkind? — actual gameplay on a phone</div></div>
 
     <article class="game" id="what_would_you_say" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-what_would_you_say"><img src="thumbs/what_would_you_say.webp" width="640" height="360" loading="lazy"
-             alt="What Would You Say? on screen"></a>
+        <a class="tvl" href="#lb-what_would_you_say"><img src="thumbs/what_would_you_say.webp" width="640" height="360" loading="lazy"
+             alt="What Would You Say? on a television"></a>
+        <a class="ph" href="#lbp-what_would_you_say"><img src="phone/thumbs/what_would_you_say.webp" width="300" height="650" loading="lazy"
+             alt="What Would You Say? on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">💬</span><h3>What Would You Say?</h3></div>
@@ -296,8 +350,8 @@
             <ul class="bens"><li>💬 Social skills</li><li>🤝 Friendly replies</li><li>🧠 Quick thinking</li><li>💛 Kindness practice</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the situation</li><li>Imagine being there</li><li>Pick what to say</li><li>Press OK to lock</li><li>Pick the kindest thing to say</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the situation</li><li>Imagine being there</li><li>Pick what to say</li><li>Press OK to lock</li><li>Pick the kindest thing to say</li></ol><ol class="steps only-touch"><li>Read the situation</li><li>Imagine being there</li><li>Pick what to say</li><li>Pick the kindest thing to say</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> What you say matters as much as what you do.</div>
@@ -306,11 +360,16 @@
     <div class="lb" id="lb-what_would_you_say"><a class="x" href="#what_would_you_say">&times;</a>
       <img src="full/what_would_you_say.webp" alt="What Would You Say? full screenshot">
       <div class="cap">What Would You Say? — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-what_would_you_say"><a class="x" href="#what_would_you_say">&times;</a>
+      <img src="phone/full/what_would_you_say.webp" alt="What Would You Say? full phone screenshot">
+      <div class="cap">What Would You Say? — actual gameplay on a phone</div></div>
 
     <article class="game" id="helping_hands" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-helping_hands"><img src="thumbs/helping_hands.webp" width="640" height="360" loading="lazy"
-             alt="Helping Hands on screen"></a>
+        <a class="tvl" href="#lb-helping_hands"><img src="thumbs/helping_hands.webp" width="640" height="360" loading="lazy"
+             alt="Helping Hands on a television"></a>
+        <a class="ph" href="#lbp-helping_hands"><img src="phone/thumbs/helping_hands.webp" width="300" height="650" loading="lazy"
+             alt="Helping Hands on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🆘</span><h3>Helping Hands</h3></div>
@@ -326,8 +385,8 @@
             <ul class="bens"><li>🆘 Helping skill</li><li>💛 Kindness</li><li>🧠 Spot needs</li><li>🤝 Action over talk</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See who needs help</li><li>Pick the right action</li><li>Skip the unhelpful</li><li>Press OK to do it</li><li>Help wins = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See who needs help</li><li>Pick the right action</li><li>Skip the unhelpful</li><li>Press OK to do it</li><li>Help wins = stars!</li></ol><ol class="steps only-touch"><li>See who needs help</li><li>Pick the right action</li><li>Skip the unhelpful</li><li>Help wins = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Helping others activates the &#x27;kindness&#x27; brain area.</div>
@@ -336,11 +395,16 @@
     <div class="lb" id="lb-helping_hands"><a class="x" href="#helping_hands">&times;</a>
       <img src="full/helping_hands.webp" alt="Helping Hands full screenshot">
       <div class="cap">Helping Hands — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-helping_hands"><a class="x" href="#helping_hands">&times;</a>
+      <img src="phone/full/helping_hands.webp" alt="Helping Hands full phone screenshot">
+      <div class="cap">Helping Hands — actual gameplay on a phone</div></div>
 
     <article class="game" id="feelings_first_aid" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-feelings_first_aid"><img src="thumbs/feelings_first_aid.webp" width="640" height="360" loading="lazy"
-             alt="Feelings First Aid on screen"></a>
+        <a class="tvl" href="#lb-feelings_first_aid"><img src="thumbs/feelings_first_aid.webp" width="640" height="360" loading="lazy"
+             alt="Feelings First Aid on a television"></a>
+        <a class="ph" href="#lbp-feelings_first_aid"><img src="phone/thumbs/feelings_first_aid.webp" width="300" height="650" loading="lazy"
+             alt="Feelings First Aid on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🫂</span><h3>Feelings First Aid</h3></div>
@@ -356,8 +420,8 @@
             <ul class="bens"><li>🫂 Empathy</li><li>💛 Emotional support</li><li>🧠 Read needs</li><li>🤝 Caring action</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See your friend&#x27;s mood</li><li>Pick a helpful reply</li><li>Skip the dismissive</li><li>Press OK to send</li><li>Caring = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See your friend&#x27;s mood</li><li>Pick a helpful reply</li><li>Skip the dismissive</li><li>Press OK to send</li><li>Caring = stars!</li></ol><ol class="steps only-touch"><li>See your friend&#x27;s mood</li><li>Pick a helpful reply</li><li>Skip the dismissive</li><li>Caring = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Sad friends want listening, not advice.</div>
@@ -366,11 +430,16 @@
     <div class="lb" id="lb-feelings_first_aid"><a class="x" href="#feelings_first_aid">&times;</a>
       <img src="full/feelings_first_aid.webp" alt="Feelings First Aid full screenshot">
       <div class="cap">Feelings First Aid — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-feelings_first_aid"><a class="x" href="#feelings_first_aid">&times;</a>
+      <img src="phone/full/feelings_first_aid.webp" alt="Feelings First Aid full phone screenshot">
+      <div class="cap">Feelings First Aid — actual gameplay on a phone</div></div>
 
     <article class="game" id="share_time" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-share_time"><img src="thumbs/share_time.webp" width="640" height="360" loading="lazy"
-             alt="Share Time on screen"></a>
+        <a class="tvl" href="#lb-share_time"><img src="thumbs/share_time.webp" width="640" height="360" loading="lazy"
+             alt="Share Time on a television"></a>
+        <a class="ph" href="#lbp-share_time"><img src="phone/thumbs/share_time.webp" width="300" height="650" loading="lazy"
+             alt="Share Time on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🍎</span><h3>Share Time</h3></div>
@@ -386,8 +455,8 @@
             <ul class="bens"><li>🍎 Fairness</li><li>🤝 Cooperation</li><li>🧠 Fair thinking</li><li>💛 Friend skills</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the share scene</li><li>Think who gets what</li><li>Pick the fair way</li><li>Press OK to share</li><li>Fair = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the share scene</li><li>Think who gets what</li><li>Pick the fair way</li><li>Press OK to share</li><li>Fair = stars!</li></ol><ol class="steps only-touch"><li>See the share scene</li><li>Think who gets what</li><li>Pick the fair way</li><li>Fair = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Even toddlers know what&#x27;s fair by age 3.</div>
@@ -396,11 +465,16 @@
     <div class="lb" id="lb-share_time"><a class="x" href="#share_time">&times;</a>
       <img src="full/share_time.webp" alt="Share Time full screenshot">
       <div class="cap">Share Time — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-share_time"><a class="x" href="#share_time">&times;</a>
+      <img src="phone/full/share_time.webp" alt="Share Time full phone screenshot">
+      <div class="cap">Share Time — actual gameplay on a phone</div></div>
 
     <article class="game" id="apology_coach" style="--ma:#FF7BA9">
       <figure>
-        <a href="#lb-apology_coach"><img src="thumbs/apology_coach.webp" width="640" height="360" loading="lazy"
-             alt="Apology Coach on screen"></a>
+        <a class="tvl" href="#lb-apology_coach"><img src="thumbs/apology_coach.webp" width="640" height="360" loading="lazy"
+             alt="Apology Coach on a television"></a>
+        <a class="ph" href="#lbp-apology_coach"><img src="phone/thumbs/apology_coach.webp" width="300" height="650" loading="lazy"
+             alt="Apology Coach on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🤝</span><h3>Apology Coach</h3></div>
@@ -416,8 +490,8 @@
             <ul class="bens"><li>🤝 Sincere apology</li><li>💛 Accountability</li><li>🧠 Self-awareness</li><li>💬 Repair skills</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read what happened</li><li>See three apologies</li><li>Pick the most real</li><li>Press OK to give</li><li>Sincere = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read what happened</li><li>See three apologies</li><li>Pick the most real</li><li>Press OK to give</li><li>Sincere = stars!</li></ol><ol class="steps only-touch"><li>Read what happened</li><li>See three apologies</li><li>Pick the most real</li><li>Sincere = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Best apologies have 3 parts: what, sorry, fix.</div>
@@ -426,11 +500,15 @@
     <div class="lb" id="lb-apology_coach"><a class="x" href="#apology_coach">&times;</a>
       <img src="full/apology_coach.webp" alt="Apology Coach full screenshot">
       <div class="cap">Apology Coach — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-apology_coach"><a class="x" href="#apology_coach">&times;</a>
+      <img src="phone/full/apology_coach.webp" alt="Apology Coach full phone screenshot">
+      <div class="cap">Apology Coach — actual gameplay on a phone</div></div>
 </div><div class="mnav"><a href="think_tank.html">← Think Tank</a><a href="time_quest.html">Time Quest →</a></div></div>
 <footer><div class="wrap fgrid">
-  <div>
+  <div style="max-width:54ch">
     <div style="font-family:Fraunces,serif;font-weight:600;color:#E3E2E9;margin-bottom:6px">BrainPlay</div>
-    A learning arcade for Android TV. Made for the sofa, the remote and one curious child at a time.
+    A learning arcade for Android TV, phones and tablets. Made for the sofa, the remote, small fingers and
+    one curious child at a time.
   </div>
   <div>
     <a href="https://play.google.com/store/apps/details?id=com.mahesh.brainplay">Get BrainPlay on Google Play</a><br>

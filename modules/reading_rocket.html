@@ -8,7 +8,7 @@
 <meta property="og:title" content="Reading Rocket — BrainPlay">
 <meta property="og:description" content="Read, infer, answer. Grows comprehension, vocabulary and the grammar habits behind clear sentences.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/feature.png">
+<meta property="og:image" content="https://maheshthopukara.github.io/BrainPlay/assets/feature.png">
 <meta name="theme-color" content="#0E0F13">
 <link rel="icon" href="../assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,7 @@
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="../index.html"><img src="../assets/icon.png" alt="">BrainPlay</a>
   <div class="nav-sp"></div>
+  <a class="lnk" href="../index.html#screens">Every screen</a>
   <a class="lnk" href="../index.html#worlds">Worlds</a>
   <a class="lnk" href="../index.html#how">How it works</a>
   <a class="lnk" href="../index.html#grownups">For grown-ups</a>
@@ -28,6 +29,14 @@
      style="color:var(--accent);font-weight:600">Get the app ↗</a>
 </div></header>
 
+<input class="ctl" type="radio" name="ctl" id="ctl-tv" value="tv" checked>
+<input class="ctl" type="radio" name="ctl" id="ctl-touch" value="touch">
+<script>
+(function(){var k=null;try{k=localStorage.getItem('bp-controls')}catch(_){}
+if(k!=='tv'&&k!=='touch'){k=matchMedia('(pointer:coarse)').matches?'touch':'tv'}
+document.getElementById('ctl-'+k).checked=true;
+document.addEventListener('change',function(ev){if(ev.target.name==='ctl'){try{localStorage.setItem('bp-controls',ev.target.value)}catch(_){}}});})();
+</script>
 <div class="wrap mhead" style="--ma:#FFD66B">
   <a class="back" href="../index.html#worlds">← All worlds</a>
   <div class="em">📖</div>
@@ -35,12 +44,17 @@
   <h1>Reading Rocket</h1>
   <p class="lede">Read, infer, answer. Grows comprehension, vocabulary and the grammar habits behind clear sentences.</p>
   <p class="mute" style="font-size:.88rem">24 games · in the order we'd teach them</p>
+  <div class="ctlrow">How to play, for
+    <span class="ctlbar"><label for="ctl-tv">📺 TV remote</label><label for="ctl-touch">👆 Touch screen</label></span>
+  </div>
 </div>
 <div class="wrap"><div class="games" style="--ma:#FFD66B">
     <article class="game" id="synonym_swap" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-synonym_swap"><img src="thumbs/synonym_swap.webp" width="640" height="360" loading="lazy"
-             alt="Synonym Swap on screen"></a>
+        <a class="tvl" href="#lb-synonym_swap"><img src="thumbs/synonym_swap.webp" width="640" height="360" loading="lazy"
+             alt="Synonym Swap on a television"></a>
+        <a class="ph" href="#lbp-synonym_swap"><img src="phone/thumbs/synonym_swap.webp" width="300" height="650" loading="lazy"
+             alt="Synonym Swap on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔄</span><h3>Synonym Swap</h3></div>
@@ -56,8 +70,8 @@
             <ul class="bens"><li>🔄 Synonyms</li><li>📚 Vocab growth</li><li>🧠 Word meaning</li><li>📖 Word-precision</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the target word</li><li>Read each option</li><li>Pick the same meaning</li><li>Press OK to confirm</li><li>Right swap = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the target word</li><li>Read each option</li><li>Pick the same meaning</li><li>Press OK to confirm</li><li>Right swap = stars!</li></ol><ol class="steps only-touch"><li>See the target word</li><li>Read each option</li><li>Pick the same meaning</li><li>Right swap = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Synonym = words that mean the same.</div>
@@ -66,11 +80,16 @@
     <div class="lb" id="lb-synonym_swap"><a class="x" href="#synonym_swap">&times;</a>
       <img src="full/synonym_swap.webp" alt="Synonym Swap full screenshot">
       <div class="cap">Synonym Swap — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-synonym_swap"><a class="x" href="#synonym_swap">&times;</a>
+      <img src="phone/full/synonym_swap.webp" alt="Synonym Swap full phone screenshot">
+      <div class="cap">Synonym Swap — actual gameplay on a phone</div></div>
 
     <article class="game" id="vocab_builder" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-vocab_builder"><img src="thumbs/vocab_builder.webp" width="640" height="360" loading="lazy"
-             alt="Vocab Builder on screen"></a>
+        <a class="tvl" href="#lb-vocab_builder"><img src="thumbs/vocab_builder.webp" width="640" height="360" loading="lazy"
+             alt="Vocab Builder on a television"></a>
+        <a class="ph" href="#lbp-vocab_builder"><img src="phone/thumbs/vocab_builder.webp" width="300" height="650" loading="lazy"
+             alt="Vocab Builder on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">📚</span><h3>Vocab Builder</h3></div>
@@ -86,8 +105,8 @@
             <ul class="bens"><li>📚 Vocabulary</li><li>🧠 Word knowledge</li><li>📖 Definition skill</li><li>🎯 Precise meaning</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the word</li><li>Read each meaning</li><li>Pick the best one</li><li>Press OK to lock</li><li>Right = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the word</li><li>Read each meaning</li><li>Pick the best one</li><li>Press OK to lock</li><li>Right = stars!</li></ol><ol class="steps only-touch"><li>Read the word</li><li>Read each meaning</li><li>Pick the best one</li><li>Right = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Kids learn 3000 new words a year!</div>
@@ -96,11 +115,16 @@
     <div class="lb" id="lb-vocab_builder"><a class="x" href="#vocab_builder">&times;</a>
       <img src="full/vocab_builder.webp" alt="Vocab Builder full screenshot">
       <div class="cap">Vocab Builder — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-vocab_builder"><a class="x" href="#vocab_builder">&times;</a>
+      <img src="phone/full/vocab_builder.webp" alt="Vocab Builder full phone screenshot">
+      <div class="cap">Vocab Builder — actual gameplay on a phone</div></div>
 
     <article class="game" id="article_pick" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-article_pick"><img src="thumbs/article_pick.webp" width="640" height="360" loading="lazy"
-             alt="Article Pick on screen"></a>
+        <a class="tvl" href="#lb-article_pick"><img src="thumbs/article_pick.webp" width="640" height="360" loading="lazy"
+             alt="Article Pick on a television"></a>
+        <a class="ph" href="#lbp-article_pick"><img src="phone/thumbs/article_pick.webp" width="300" height="650" loading="lazy"
+             alt="Article Pick on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🪧</span><h3>Article Pick</h3></div>
@@ -116,8 +140,8 @@
             <ul class="bens"><li>🪧 Articles</li><li>📖 Grammar</li><li>🧠 Word rules</li><li>✏️ Sentence sense</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence</li><li>Spot the blank</li><li>Pick the one that fits</li><li>Press OK to lock</li><li>Right pick = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence</li><li>Spot the blank</li><li>Pick the one that fits</li><li>Press OK to lock</li><li>Right pick = stars!</li></ol><ol class="steps only-touch"><li>Read the sentence</li><li>Spot the blank</li><li>Pick the one that fits</li><li>Right pick = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> &#x27;A&#x27; before consonant sounds, &#x27;an&#x27; before vowels.</div>
@@ -126,11 +150,16 @@
     <div class="lb" id="lb-article_pick"><a class="x" href="#article_pick">&times;</a>
       <img src="full/article_pick.webp" alt="Article Pick full screenshot">
       <div class="cap">Article Pick — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-article_pick"><a class="x" href="#article_pick">&times;</a>
+      <img src="phone/full/article_pick.webp" alt="Article Pick full phone screenshot">
+      <div class="cap">Article Pick — actual gameplay on a phone</div></div>
 
     <article class="game" id="plural_maker" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-plural_maker"><img src="thumbs/plural_maker.webp" width="640" height="360" loading="lazy"
-             alt="Plural Maker on screen"></a>
+        <a class="tvl" href="#lb-plural_maker"><img src="thumbs/plural_maker.webp" width="640" height="360" loading="lazy"
+             alt="Plural Maker on a television"></a>
+        <a class="ph" href="#lbp-plural_maker"><img src="phone/thumbs/plural_maker.webp" width="300" height="650" loading="lazy"
+             alt="Plural Maker on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">➕</span><h3>Plural Maker</h3></div>
@@ -146,8 +175,8 @@
             <ul class="bens"><li>➕ Plural forms</li><li>📖 Grammar</li><li>🧠 Irregular words</li><li>✏️ Word skill</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the singular</li><li>Pick the plural</li><li>Watch for irregulars</li><li>Press OK to lock</li><li>Right form = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the singular</li><li>Pick the plural</li><li>Watch for irregulars</li><li>Press OK to lock</li><li>Right form = stars!</li></ol><ol class="steps only-touch"><li>Read the singular</li><li>Pick the plural</li><li>Watch for irregulars</li><li>Right form = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Most plurals just add -s. Some are weird.</div>
@@ -156,11 +185,16 @@
     <div class="lb" id="lb-plural_maker"><a class="x" href="#plural_maker">&times;</a>
       <img src="full/plural_maker.webp" alt="Plural Maker full screenshot">
       <div class="cap">Plural Maker — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-plural_maker"><a class="x" href="#plural_maker">&times;</a>
+      <img src="phone/full/plural_maker.webp" alt="Plural Maker full phone screenshot">
+      <div class="cap">Plural Maker — actual gameplay on a phone</div></div>
 
     <article class="game" id="pronoun_pick" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-pronoun_pick"><img src="thumbs/pronoun_pick.webp" width="640" height="360" loading="lazy"
-             alt="Pronoun Pick on screen"></a>
+        <a class="tvl" href="#lb-pronoun_pick"><img src="thumbs/pronoun_pick.webp" width="640" height="360" loading="lazy"
+             alt="Pronoun Pick on a television"></a>
+        <a class="ph" href="#lbp-pronoun_pick"><img src="phone/thumbs/pronoun_pick.webp" width="300" height="650" loading="lazy"
+             alt="Pronoun Pick on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">👤</span><h3>Pronoun Pick</h3></div>
@@ -176,8 +210,8 @@
             <ul class="bens"><li>👤 Pronouns</li><li>📖 Grammar</li><li>🧠 Reference link</li><li>✏️ Sentence flow</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence</li><li>Spot the repeat noun</li><li>Pick the pronoun</li><li>Press OK to swap</li><li>Right pronoun = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence</li><li>Spot the repeat noun</li><li>Pick the pronoun</li><li>Press OK to swap</li><li>Right pronoun = stars!</li></ol><ol class="steps only-touch"><li>Read the sentence</li><li>Spot the repeat noun</li><li>Pick the pronoun</li><li>Right pronoun = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Pronouns are tiny words that replace names.</div>
@@ -186,11 +220,16 @@
     <div class="lb" id="lb-pronoun_pick"><a class="x" href="#pronoun_pick">&times;</a>
       <img src="full/pronoun_pick.webp" alt="Pronoun Pick full screenshot">
       <div class="cap">Pronoun Pick — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-pronoun_pick"><a class="x" href="#pronoun_pick">&times;</a>
+      <img src="phone/full/pronoun_pick.webp" alt="Pronoun Pick full phone screenshot">
+      <div class="cap">Pronoun Pick — actual gameplay on a phone</div></div>
 
     <article class="game" id="verb_tense" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-verb_tense"><img src="thumbs/verb_tense.webp" width="640" height="360" loading="lazy"
-             alt="Verb Tense on screen"></a>
+        <a class="tvl" href="#lb-verb_tense"><img src="thumbs/verb_tense.webp" width="640" height="360" loading="lazy"
+             alt="Verb Tense on a television"></a>
+        <a class="ph" href="#lbp-verb_tense"><img src="phone/thumbs/verb_tense.webp" width="300" height="650" loading="lazy"
+             alt="Verb Tense on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">⏳</span><h3>Verb Tense</h3></div>
@@ -206,8 +245,8 @@
             <ul class="bens"><li>⏳ Verb tenses</li><li>📖 Grammar</li><li>🧠 Time language</li><li>✏️ Writing skill</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence</li><li>Find the verb</li><li>Pick its tense</li><li>Press OK to lock</li><li>Right tense = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence</li><li>Find the verb</li><li>Pick its tense</li><li>Press OK to lock</li><li>Right tense = stars!</li></ol><ol class="steps only-touch"><li>Read the sentence</li><li>Find the verb</li><li>Pick its tense</li><li>Right tense = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Past = already happened. Present = now. Future = will.</div>
@@ -216,11 +255,16 @@
     <div class="lb" id="lb-verb_tense"><a class="x" href="#verb_tense">&times;</a>
       <img src="full/verb_tense.webp" alt="Verb Tense full screenshot">
       <div class="cap">Verb Tense — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-verb_tense"><a class="x" href="#verb_tense">&times;</a>
+      <img src="phone/full/verb_tense.webp" alt="Verb Tense full phone screenshot">
+      <div class="cap">Verb Tense — actual gameplay on a phone</div></div>
 
     <article class="game" id="punctuation_pop" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-punctuation_pop"><img src="thumbs/punctuation_pop.webp" width="640" height="360" loading="lazy"
-             alt="Punctuation Pop on screen"></a>
+        <a class="tvl" href="#lb-punctuation_pop"><img src="thumbs/punctuation_pop.webp" width="640" height="360" loading="lazy"
+             alt="Punctuation Pop on a television"></a>
+        <a class="ph" href="#lbp-punctuation_pop"><img src="phone/thumbs/punctuation_pop.webp" width="300" height="650" loading="lazy"
+             alt="Punctuation Pop on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">❗</span><h3>Punctuation Pop</h3></div>
@@ -236,8 +280,8 @@
             <ul class="bens"><li>❗ Punctuation</li><li>📖 Sentence tone</li><li>🧠 Grammar feel</li><li>✏️ Writing prep</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence</li><li>Feel its tone</li><li>Pick . ? or !</li><li>Press OK to lock</li><li>Right mark = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence</li><li>Feel its tone</li><li>Pick . ? or !</li><li>Press OK to lock</li><li>Right mark = stars!</li></ol><ol class="steps only-touch"><li>Read the sentence</li><li>Feel its tone</li><li>Pick . ? or !</li><li>Right mark = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Punctuation was invented around 200 BC.</div>
@@ -246,11 +290,16 @@
     <div class="lb" id="lb-punctuation_pop"><a class="x" href="#punctuation_pop">&times;</a>
       <img src="full/punctuation_pop.webp" alt="Punctuation Pop full screenshot">
       <div class="cap">Punctuation Pop — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-punctuation_pop"><a class="x" href="#punctuation_pop">&times;</a>
+      <img src="phone/full/punctuation_pop.webp" alt="Punctuation Pop full phone screenshot">
+      <div class="cap">Punctuation Pop — actual gameplay on a phone</div></div>
 
     <article class="game" id="capital_catcher" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-capital_catcher"><img src="thumbs/capital_catcher.webp" width="640" height="360" loading="lazy"
-             alt="Capital Catcher on screen"></a>
+        <a class="tvl" href="#lb-capital_catcher"><img src="thumbs/capital_catcher.webp" width="640" height="360" loading="lazy"
+             alt="Capital Catcher on a television"></a>
+        <a class="ph" href="#lbp-capital_catcher"><img src="phone/thumbs/capital_catcher.webp" width="300" height="650" loading="lazy"
+             alt="Capital Catcher on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🅰️</span><h3>Capital Catcher</h3></div>
@@ -276,11 +325,16 @@
     <div class="lb" id="lb-capital_catcher"><a class="x" href="#capital_catcher">&times;</a>
       <img src="full/capital_catcher.webp" alt="Capital Catcher full screenshot">
       <div class="cap">Capital Catcher — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-capital_catcher"><a class="x" href="#capital_catcher">&times;</a>
+      <img src="phone/full/capital_catcher.webp" alt="Capital Catcher full phone screenshot">
+      <div class="cap">Capital Catcher — actual gameplay on a phone</div></div>
 
     <article class="game" id="sentence_sort" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-sentence_sort"><img src="thumbs/sentence_sort.webp" width="640" height="360" loading="lazy"
-             alt="Sentence Sort on screen"></a>
+        <a class="tvl" href="#lb-sentence_sort"><img src="thumbs/sentence_sort.webp" width="640" height="360" loading="lazy"
+             alt="Sentence Sort on a television"></a>
+        <a class="ph" href="#lbp-sentence_sort"><img src="phone/thumbs/sentence_sort.webp" width="300" height="650" loading="lazy"
+             alt="Sentence Sort on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">📑</span><h3>Sentence Sort</h3></div>
@@ -296,8 +350,8 @@
             <ul class="bens"><li>📑 Story order</li><li>📖 Narrative flow</li><li>🧠 Logical sequence</li><li>✏️ Writing prep</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read each sentence</li><li>Find what&#x27;s first</li><li>D-pad to reorder</li><li>Build the story</li><li>Right order = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read each sentence</li><li>Find what&#x27;s first</li><li>D-pad to reorder</li><li>Build the story</li><li>Right order = stars!</li></ol><ol class="steps only-touch"><li>Read each sentence</li><li>Find what&#x27;s first</li><li>Swipe to reorder</li><li>Build the story</li><li>Right order = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Stories have a beginning, middle, end — in order!</div>
@@ -306,11 +360,16 @@
     <div class="lb" id="lb-sentence_sort"><a class="x" href="#sentence_sort">&times;</a>
       <img src="full/sentence_sort.webp" alt="Sentence Sort full screenshot">
       <div class="cap">Sentence Sort — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-sentence_sort"><a class="x" href="#sentence_sort">&times;</a>
+      <img src="phone/full/sentence_sort.webp" alt="Sentence Sort full phone screenshot">
+      <div class="cap">Sentence Sort — actual gameplay on a phone</div></div>
 
     <article class="game" id="wh_quiz" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-wh_quiz"><img src="thumbs/wh_quiz.webp" width="640" height="360" loading="lazy"
-             alt="Wh-Quiz on screen"></a>
+        <a class="tvl" href="#lb-wh_quiz"><img src="thumbs/wh_quiz.webp" width="640" height="360" loading="lazy"
+             alt="Wh-Quiz on a television"></a>
+        <a class="ph" href="#lbp-wh_quiz"><img src="phone/thumbs/wh_quiz.webp" width="300" height="650" loading="lazy"
+             alt="Wh-Quiz on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">❓</span><h3>Wh-Quiz</h3></div>
@@ -326,8 +385,8 @@
             <ul class="bens"><li>❓ Wh-questions</li><li>📚 Comprehension</li><li>🧠 Detail recall</li><li>📖 Reading skill</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence</li><li>Read the Wh-question</li><li>Pick the answer</li><li>Press OK to lock</li><li>Right = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence</li><li>Read the Wh-question</li><li>Pick the answer</li><li>Press OK to lock</li><li>Right = stars!</li></ol><ol class="steps only-touch"><li>Read the sentence</li><li>Read the Wh-question</li><li>Pick the answer</li><li>Right = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Wh-questions: Who, What, Where, When, Why, How.</div>
@@ -336,11 +395,16 @@
     <div class="lb" id="lb-wh_quiz"><a class="x" href="#wh_quiz">&times;</a>
       <img src="full/wh_quiz.webp" alt="Wh-Quiz full screenshot">
       <div class="cap">Wh-Quiz — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-wh_quiz"><a class="x" href="#wh_quiz">&times;</a>
+      <img src="phone/full/wh_quiz.webp" alt="Wh-Quiz full phone screenshot">
+      <div class="cap">Wh-Quiz — actual gameplay on a phone</div></div>
 
     <article class="game" id="cause_effect" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-cause_effect"><img src="thumbs/cause_effect.webp" width="640" height="360" loading="lazy"
-             alt="Cause &amp; Effect on screen"></a>
+        <a class="tvl" href="#lb-cause_effect"><img src="thumbs/cause_effect.webp" width="640" height="360" loading="lazy"
+             alt="Cause &amp; Effect on a television"></a>
+        <a class="ph" href="#lbp-cause_effect"><img src="phone/thumbs/cause_effect.webp" width="300" height="650" loading="lazy"
+             alt="Cause &amp; Effect on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">⚡</span><h3>Cause &amp; Effect</h3></div>
@@ -356,8 +420,8 @@
             <ul class="bens"><li>⚡ Cause + effect</li><li>🧠 Logical link</li><li>📚 Story reasoning</li><li>🎯 If-then logic</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the scene</li><li>Find the link</li><li>Pick cause or effect</li><li>Press OK to lock</li><li>Right link = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the scene</li><li>Find the link</li><li>Pick cause or effect</li><li>Press OK to lock</li><li>Right link = stars!</li></ol><ol class="steps only-touch"><li>Read the scene</li><li>Find the link</li><li>Pick cause or effect</li><li>Right link = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Cause-effect is how scientists understand the world.</div>
@@ -366,11 +430,16 @@
     <div class="lb" id="lb-cause_effect"><a class="x" href="#cause_effect">&times;</a>
       <img src="full/cause_effect.webp" alt="Cause &amp; Effect full screenshot">
       <div class="cap">Cause &amp; Effect — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-cause_effect"><a class="x" href="#cause_effect">&times;</a>
+      <img src="phone/full/cause_effect.webp" alt="Cause &amp; Effect full phone screenshot">
+      <div class="cap">Cause &amp; Effect — actual gameplay on a phone</div></div>
 
     <article class="game" id="read_and_answer" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-read_and_answer"><img src="thumbs/read_and_answer.webp" width="640" height="360" loading="lazy"
-             alt="Read &amp; Answer on screen"></a>
+        <a class="tvl" href="#lb-read_and_answer"><img src="thumbs/read_and_answer.webp" width="640" height="360" loading="lazy"
+             alt="Read &amp; Answer on a television"></a>
+        <a class="ph" href="#lbp-read_and_answer"><img src="phone/thumbs/read_and_answer.webp" width="300" height="650" loading="lazy"
+             alt="Read &amp; Answer on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">📚</span><h3>Read &amp; Answer</h3></div>
@@ -386,8 +455,8 @@
             <ul class="bens"><li>📚 Reading comp</li><li>🧠 Memory + detail</li><li>📖 Fluency</li><li>🎯 Focused reading</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the paragraph</li><li>Read the question</li><li>D-pad to pick answer</li><li>Press OK to lock</li><li>Right = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the paragraph</li><li>Read the question</li><li>D-pad to pick answer</li><li>Press OK to lock</li><li>Right = stars!</li></ol><ol class="steps only-touch"><li>Read the paragraph</li><li>Read the question</li><li>Tap your answer</li><li>Right = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Reading 20 minutes a day = 1.8 million words a year.</div>
@@ -396,11 +465,16 @@
     <div class="lb" id="lb-read_and_answer"><a class="x" href="#read_and_answer">&times;</a>
       <img src="full/read_and_answer.webp" alt="Read &amp; Answer full screenshot">
       <div class="cap">Read &amp; Answer — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-read_and_answer"><a class="x" href="#read_and_answer">&times;</a>
+      <img src="phone/full/read_and_answer.webp" alt="Read &amp; Answer full phone screenshot">
+      <div class="cap">Read &amp; Answer — actual gameplay on a phone</div></div>
 
     <article class="game" id="story_map" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-story_map"><img src="thumbs/story_map.webp" width="640" height="360" loading="lazy"
-             alt="Story Map on screen"></a>
+        <a class="tvl" href="#lb-story_map"><img src="thumbs/story_map.webp" width="640" height="360" loading="lazy"
+             alt="Story Map on a television"></a>
+        <a class="ph" href="#lbp-story_map"><img src="phone/thumbs/story_map.webp" width="300" height="650" loading="lazy"
+             alt="Story Map on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🗺️</span><h3>Story Map</h3></div>
@@ -426,11 +500,16 @@
     <div class="lb" id="lb-story_map"><a class="x" href="#story_map">&times;</a>
       <img src="full/story_map.webp" alt="Story Map full screenshot">
       <div class="cap">Story Map — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-story_map"><a class="x" href="#story_map">&times;</a>
+      <img src="phone/full/story_map.webp" alt="Story Map full phone screenshot">
+      <div class="cap">Story Map — actual gameplay on a phone</div></div>
 
     <article class="game" id="main_idea" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-main_idea"><img src="thumbs/main_idea.webp" width="640" height="360" loading="lazy"
-             alt="Main Idea on screen"></a>
+        <a class="tvl" href="#lb-main_idea"><img src="thumbs/main_idea.webp" width="640" height="360" loading="lazy"
+             alt="Main Idea on a television"></a>
+        <a class="ph" href="#lbp-main_idea"><img src="phone/thumbs/main_idea.webp" width="300" height="650" loading="lazy"
+             alt="Main Idea on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🎯</span><h3>Main Idea</h3></div>
@@ -446,8 +525,8 @@
             <ul class="bens"><li>🎯 Main idea</li><li>📚 Reading comp</li><li>🧠 Summary skill</li><li>📖 Big-picture</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the passage</li><li>Think &#x27;mostly about&#x27;</li><li>Pick the best title</li><li>Press OK to lock</li><li>Right idea = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the passage</li><li>Think &#x27;mostly about&#x27;</li><li>Pick the best title</li><li>Press OK to lock</li><li>Right idea = stars!</li></ol><ol class="steps only-touch"><li>Read the passage</li><li>Think &#x27;mostly about&#x27;</li><li>Pick the best title</li><li>Right idea = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> The &#x27;main idea&#x27; is what the whole passage is mostly about.</div>
@@ -456,11 +535,16 @@
     <div class="lb" id="lb-main_idea"><a class="x" href="#main_idea">&times;</a>
       <img src="full/main_idea.webp" alt="Main Idea full screenshot">
       <div class="cap">Main Idea — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-main_idea"><a class="x" href="#main_idea">&times;</a>
+      <img src="phone/full/main_idea.webp" alt="Main Idea full phone screenshot">
+      <div class="cap">Main Idea — actual gameplay on a phone</div></div>
 
     <article class="game" id="reading_detective" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-reading_detective"><img src="thumbs/reading_detective.webp" width="640" height="360" loading="lazy"
-             alt="Reading Detective on screen"></a>
+        <a class="tvl" href="#lb-reading_detective"><img src="thumbs/reading_detective.webp" width="640" height="360" loading="lazy"
+             alt="Reading Detective on a television"></a>
+        <a class="ph" href="#lbp-reading_detective"><img src="phone/thumbs/reading_detective.webp" width="300" height="650" loading="lazy"
+             alt="Reading Detective on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🕵️</span><h3>Reading Detective</h3></div>
@@ -476,8 +560,8 @@
             <ul class="bens"><li>🕵️ Deductive logic</li><li>📚 Inference</li><li>🧠 Clue weighing</li><li>🎯 Reading detail</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read every clue</li><li>Rule out what fails</li><li>Pick the one that fits</li><li>Press OK to lock</li><li>Right solve = stars!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read every clue</li><li>Rule out what fails</li><li>Pick the one that fits</li><li>Press OK to lock</li><li>Right solve = stars!</li></ol><ol class="steps only-touch"><li>Read every clue</li><li>Rule out what fails</li><li>Pick the one that fits</li><li>Right solve = stars!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Sherlock Holmes uses clues to solve crimes.</div>
@@ -486,11 +570,16 @@
     <div class="lb" id="lb-reading_detective"><a class="x" href="#reading_detective">&times;</a>
       <img src="full/reading_detective.webp" alt="Reading Detective full screenshot">
       <div class="cap">Reading Detective — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-reading_detective"><a class="x" href="#reading_detective">&times;</a>
+      <img src="phone/full/reading_detective.webp" alt="Reading Detective full phone screenshot">
+      <div class="cap">Reading Detective — actual gameplay on a phone</div></div>
 
     <article class="game" id="grammar_police" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-grammar_police"><img src="thumbs/grammar_police.webp" width="640" height="360" loading="lazy"
-             alt="Grammar Police on screen"></a>
+        <a class="tvl" href="#lb-grammar_police"><img src="thumbs/grammar_police.webp" width="640" height="360" loading="lazy"
+             alt="Grammar Police on a television"></a>
+        <a class="ph" href="#lbp-grammar_police"><img src="phone/thumbs/grammar_police.webp" width="300" height="650" loading="lazy"
+             alt="Grammar Police on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🚨</span><h3>Grammar Police</h3></div>
@@ -506,8 +595,8 @@
             <ul class="bens"><li>🚓 Spot mistakes</li><li>🧠 All grammar rules</li><li>✍️ Better writing</li><li>🎯 Careful reading</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the whole sentence</li><li>Is it correct, or wrong?</li><li>◀ ▶ then OK to make the call</li><li>A wrong sentence shows its fix</li><li>Right call = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the whole sentence</li><li>Is it correct, or wrong?</li><li>◀ ▶ then OK to make the call</li><li>A wrong sentence shows its fix</li><li>Right call = more ⭐!</li></ol><ol class="steps only-touch"><li>Read the whole sentence</li><li>Is it correct, or wrong?</li><li>Tap your call — correct or wrong</li><li>A wrong sentence shows its fix</li><li>Right call = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Two words that touch must agree: &#x27;the dog runs&#x27;, &#x27;the dogs run&#x27;.</div>
@@ -516,11 +605,16 @@
     <div class="lb" id="lb-grammar_police"><a class="x" href="#grammar_police">&times;</a>
       <img src="full/grammar_police.webp" alt="Grammar Police full screenshot">
       <div class="cap">Grammar Police — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-grammar_police"><a class="x" href="#grammar_police">&times;</a>
+      <img src="phone/full/grammar_police.webp" alt="Grammar Police full phone screenshot">
+      <div class="cap">Grammar Police — actual gameplay on a phone</div></div>
 
     <article class="game" id="grammar_sort" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-grammar_sort"><img src="thumbs/grammar_sort.webp" width="640" height="360" loading="lazy"
-             alt="Grammar Sort on screen"></a>
+        <a class="tvl" href="#lb-grammar_sort"><img src="thumbs/grammar_sort.webp" width="640" height="360" loading="lazy"
+             alt="Grammar Sort on a television"></a>
+        <a class="ph" href="#lbp-grammar_sort"><img src="phone/thumbs/grammar_sort.webp" width="300" height="650" loading="lazy"
+             alt="Grammar Sort on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🗂️</span><h3>Grammar Sort</h3></div>
@@ -536,8 +630,8 @@
             <ul class="bens"><li>🗂️ Sort word types</li><li>🧠 Parts of speech</li><li>📖 Read closely</li><li>✍️ Better writing</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the whole sentence</li><li>◀ ▶ to aim at a bin</li><li>OK files the glowing word</li><li>Fill every bin to finish</li><li>All in the right bin = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the whole sentence</li><li>◀ ▶ to aim at a bin</li><li>OK files the glowing word</li><li>Fill every bin to finish</li><li>All in the right bin = more ⭐!</li></ol><ol class="steps only-touch"><li>Read the whole sentence</li><li>Tap the bin the glowing word belongs in</li><li>Fill every bin to finish</li><li>All in the right bin = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> A noun is a person, place or thing: dog, park, apple.</div>
@@ -546,11 +640,16 @@
     <div class="lb" id="lb-grammar_sort"><a class="x" href="#grammar_sort">&times;</a>
       <img src="full/grammar_sort.webp" alt="Grammar Sort full screenshot">
       <div class="cap">Grammar Sort — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-grammar_sort"><a class="x" href="#grammar_sort">&times;</a>
+      <img src="phone/full/grammar_sort.webp" alt="Grammar Sort full phone screenshot">
+      <div class="cap">Grammar Sort — actual gameplay on a phone</div></div>
 
     <article class="game" id="homophone_hunt" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-homophone_hunt"><img src="thumbs/homophone_hunt.webp" width="640" height="360" loading="lazy"
-             alt="Homophone Hunt on screen"></a>
+        <a class="tvl" href="#lb-homophone_hunt"><img src="thumbs/homophone_hunt.webp" width="640" height="360" loading="lazy"
+             alt="Homophone Hunt on a television"></a>
+        <a class="ph" href="#lbp-homophone_hunt"><img src="phone/thumbs/homophone_hunt.webp" width="300" height="650" loading="lazy"
+             alt="Homophone Hunt on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔍</span><h3>Homophone Hunt</h3></div>
@@ -566,8 +665,8 @@
             <ul class="bens"><li>🔍 Spot the right twin</li><li>✍️ Spell it correctly</li><li>📖 Read for meaning</li><li>🧠 Beat tricky words</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the sentence with the blank</li><li>The suspects all sound the same</li><li>◀ ▶ line up the suspects</li><li>OK picks the one that fits</li><li>Right catch = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the sentence with the blank</li><li>The suspects all sound the same</li><li>◀ ▶ line up the suspects</li><li>OK picks the one that fits</li><li>Right catch = more ⭐!</li></ol><ol class="steps only-touch"><li>Read the sentence with the blank</li><li>The suspects all sound the same</li><li>Tap the one that fits</li><li>Right catch = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Words that sound the same are called homophones — &#x27;same sound&#x27;.</div>
@@ -576,11 +675,16 @@
     <div class="lb" id="lb-homophone_hunt"><a class="x" href="#homophone_hunt">&times;</a>
       <img src="full/homophone_hunt.webp" alt="Homophone Hunt full screenshot">
       <div class="cap">Homophone Hunt — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-homophone_hunt"><a class="x" href="#homophone_hunt">&times;</a>
+      <img src="phone/full/homophone_hunt.webp" alt="Homophone Hunt full phone screenshot">
+      <div class="cap">Homophone Hunt — actual gameplay on a phone</div></div>
 
     <article class="game" id="word_swap" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-word_swap"><img src="thumbs/word_swap.webp" width="640" height="360" loading="lazy"
-             alt="Word Swap on screen"></a>
+        <a class="tvl" href="#lb-word_swap"><img src="thumbs/word_swap.webp" width="640" height="360" loading="lazy"
+             alt="Word Swap on a television"></a>
+        <a class="ph" href="#lbp-word_swap"><img src="phone/thumbs/word_swap.webp" width="300" height="650" loading="lazy"
+             alt="Word Swap on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔤</span><h3>Word Swap</h3></div>
@@ -596,8 +700,8 @@
             <ul class="bens"><li>🔤 Spot letter changes</li><li>📖 Read the clue</li><li>✍️ Build new words</li><li>🧠 Sharp spelling</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the word and the clue</li><li>One letter needs to change</li><li>◀ ▶ ▲ ▼ to the letters</li><li>OK to type, ⌫ to fix</li><li>Spell the new word for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the word and the clue</li><li>One letter needs to change</li><li>◀ ▶ ▲ ▼ to the letters</li><li>OK to type, ⌫ to fix</li><li>Spell the new word for ⭐!</li></ol><ol class="steps only-touch"><li>Read the word and the clue</li><li>One letter needs to change</li><li>Tap a letter to type it, ⌫ to fix</li><li>Spell the new word for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> CAT, COT, COG, DOG — change one letter each time to walk from cat to dog!</div>
@@ -606,11 +710,16 @@
     <div class="lb" id="lb-word_swap"><a class="x" href="#word_swap">&times;</a>
       <img src="full/word_swap.webp" alt="Word Swap full screenshot">
       <div class="cap">Word Swap — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-word_swap"><a class="x" href="#word_swap">&times;</a>
+      <img src="phone/full/word_swap.webp" alt="Word Swap full phone screenshot">
+      <div class="cap">Word Swap — actual gameplay on a phone</div></div>
 
     <article class="game" id="silent_letters" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-silent_letters"><img src="thumbs/silent_letters.webp" width="640" height="360" loading="lazy"
-             alt="Silent Letters on screen"></a>
+        <a class="tvl" href="#lb-silent_letters"><img src="thumbs/silent_letters.webp" width="640" height="360" loading="lazy"
+             alt="Silent Letters on a television"></a>
+        <a class="ph" href="#lbp-silent_letters"><img src="phone/thumbs/silent_letters.webp" width="300" height="650" loading="lazy"
+             alt="Silent Letters on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🤫</span><h3>Silent Letters</h3></div>
@@ -626,8 +735,8 @@
             <ul class="bens"><li>🤫 Spot silent letters</li><li>👂 Listen closely</li><li>✍️ Spell tricky words</li><li>🧠 Sound-smart reading</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Look at the word&#x27;s letters</li><li>🔊 Hear it to listen</li><li>◀ ▶ move across the letters</li><li>OK taps the ones you don&#x27;t say</li><li>Check when you&#x27;ve caught them all!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Look at the word&#x27;s letters</li><li>🔊 Hear it to listen</li><li>◀ ▶ move across the letters</li><li>OK taps the ones you don&#x27;t say</li><li>Check when you&#x27;ve caught them all!</li></ol><ol class="steps only-touch"><li>Look at the word&#x27;s letters</li><li>🔊 Hear it to listen</li><li>Tap the ones you don&#x27;t say</li><li>Check when you&#x27;ve caught them all!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> The K in KNIGHT, KNEE and KNOCK is always silent.</div>
@@ -636,11 +745,16 @@
     <div class="lb" id="lb-silent_letters"><a class="x" href="#silent_letters">&times;</a>
       <img src="full/silent_letters.webp" alt="Silent Letters full screenshot">
       <div class="cap">Silent Letters — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-silent_letters"><a class="x" href="#silent_letters">&times;</a>
+      <img src="phone/full/silent_letters.webp" alt="Silent Letters full phone screenshot">
+      <div class="cap">Silent Letters — actual gameplay on a phone</div></div>
 
     <article class="game" id="spell_check" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-spell_check"><img src="thumbs/spell_check.webp" width="640" height="360" loading="lazy"
-             alt="Spell Check on screen"></a>
+        <a class="tvl" href="#lb-spell_check"><img src="thumbs/spell_check.webp" width="640" height="360" loading="lazy"
+             alt="Spell Check on a television"></a>
+        <a class="ph" href="#lbp-spell_check"><img src="phone/thumbs/spell_check.webp" width="300" height="650" loading="lazy"
+             alt="Spell Check on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🔤</span><h3>Spell Check</h3></div>
@@ -656,8 +770,8 @@
             <ul class="bens"><li>🔤 Spot the right spelling</li><li>👀 Read letter by letter</li><li>✍️ Remember tricky words</li><li>🧠 Proofreading skills</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read all four spellings</li><li>Three have a letter wrong</li><li>◀ ▶ ▲ ▼ to move</li><li>OK picks the right one</li><li>Every catch = more ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read all four spellings</li><li>Three have a letter wrong</li><li>◀ ▶ ▲ ▼ to move</li><li>OK picks the right one</li><li>Every catch = more ⭐!</li></ol><ol class="steps only-touch"><li>Read all four spellings</li><li>Three have a letter wrong</li><li>Tap the right one</li><li>Every catch = more ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> BOOKKEEPER is the only everyday word with three double letters in a row: OO, KK, EE.</div>
@@ -666,11 +780,16 @@
     <div class="lb" id="lb-spell_check"><a class="x" href="#spell_check">&times;</a>
       <img src="full/spell_check.webp" alt="Spell Check full screenshot">
       <div class="cap">Spell Check — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-spell_check"><a class="x" href="#spell_check">&times;</a>
+      <img src="phone/full/spell_check.webp" alt="Spell Check full phone screenshot">
+      <div class="cap">Spell Check — actual gameplay on a phone</div></div>
 
     <article class="game" id="syllable_stack" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-syllable_stack"><img src="thumbs/syllable_stack.webp" width="640" height="360" loading="lazy"
-             alt="Syllable Stack on screen"></a>
+        <a class="tvl" href="#lb-syllable_stack"><img src="thumbs/syllable_stack.webp" width="640" height="360" loading="lazy"
+             alt="Syllable Stack on a television"></a>
+        <a class="ph" href="#lbp-syllable_stack"><img src="phone/thumbs/syllable_stack.webp" width="300" height="650" loading="lazy"
+             alt="Syllable Stack on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🧱</span><h3>Syllable Stack</h3></div>
@@ -686,8 +805,8 @@
             <ul class="bens"><li>🧱 Build words from chunks</li><li>👂 Hear the beats</li><li>✍️ Spell longer words</li><li>🧠 Sound-smart reading</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>See the chunks — and the picture, if shown</li><li>Say the word in beats: but-ter-fly</li><li>◀ ▶ pick a chunk</li><li>OK stacks it, ⟲ Undo to fix</li><li>Build the word for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>See the chunks — and the picture, if shown</li><li>Say the word in beats: but-ter-fly</li><li>◀ ▶ pick a chunk</li><li>OK stacks it, ⟲ Undo to fix</li><li>Build the word for ⭐!</li></ol><ol class="steps only-touch"><li>See the chunks — and the picture, if shown</li><li>Say the word in beats: but-ter-fly</li><li>Tap a chunk to stack it, ⟲ Undo to fix</li><li>Build the word for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> A syllable is one beat of a word — clap as you say it!</div>
@@ -696,11 +815,16 @@
     <div class="lb" id="lb-syllable_stack"><a class="x" href="#syllable_stack">&times;</a>
       <img src="full/syllable_stack.webp" alt="Syllable Stack full screenshot">
       <div class="cap">Syllable Stack — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-syllable_stack"><a class="x" href="#syllable_stack">&times;</a>
+      <img src="phone/full/syllable_stack.webp" alt="Syllable Stack full phone screenshot">
+      <div class="cap">Syllable Stack — actual gameplay on a phone</div></div>
 
     <article class="game" id="word_analogies" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-word_analogies"><img src="thumbs/word_analogies.webp" width="640" height="360" loading="lazy"
-             alt="Word Analogies on screen"></a>
+        <a class="tvl" href="#lb-word_analogies"><img src="thumbs/word_analogies.webp" width="640" height="360" loading="lazy"
+             alt="Word Analogies on a television"></a>
+        <a class="ph" href="#lbp-word_analogies"><img src="phone/thumbs/word_analogies.webp" width="300" height="650" loading="lazy"
+             alt="Word Analogies on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">⚖️</span><h3>Word Analogies</h3></div>
@@ -716,8 +840,8 @@
             <ul class="bens"><li>🔗 Spot word links</li><li>🧠 Reason it out</li><li>📚 Grow vocabulary</li><li>🎯 Match the pattern</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read the first pair (A ➜ B)</li><li>Work out how they link</li><li>◀ ▶ ▲ ▼ to the four words</li><li>OK picks the same link for C</li><li>Match the pattern for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read the first pair (A ➜ B)</li><li>Work out how they link</li><li>◀ ▶ ▲ ▼ to the four words</li><li>OK picks the same link for C</li><li>Match the pattern for ⭐!</li></ol><ol class="steps only-touch"><li>Read the first pair (A ➜ B)</li><li>Work out how they link</li><li>Tap the word with the same link</li><li>Match the pattern for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> An analogy shows how two pairs of words share the same link.</div>
@@ -726,11 +850,16 @@
     <div class="lb" id="lb-word_analogies"><a class="x" href="#word_analogies">&times;</a>
       <img src="full/word_analogies.webp" alt="Word Analogies full screenshot">
       <div class="cap">Word Analogies — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-word_analogies"><a class="x" href="#word_analogies">&times;</a>
+      <img src="phone/full/word_analogies.webp" alt="Word Analogies full phone screenshot">
+      <div class="cap">Word Analogies — actual gameplay on a phone</div></div>
 
     <article class="game" id="word_groups" style="--ma:#FFD66B">
       <figure>
-        <a href="#lb-word_groups"><img src="thumbs/word_groups.webp" width="640" height="360" loading="lazy"
-             alt="Word Groups on screen"></a>
+        <a class="tvl" href="#lb-word_groups"><img src="thumbs/word_groups.webp" width="640" height="360" loading="lazy"
+             alt="Word Groups on a television"></a>
+        <a class="ph" href="#lbp-word_groups"><img src="phone/thumbs/word_groups.webp" width="300" height="650" loading="lazy"
+             alt="Word Groups on a phone"></a>
       </figure>
       <div class="body">
         <div class="g-head"><span class="em">🧩</span><h3>Word Groups</h3></div>
@@ -746,8 +875,8 @@
             <ul class="bens"><li>🧩 Sort into groups</li><li>🧠 Spot what&#x27;s alike</li><li>📚 Grow vocabulary</li><li>🔍 Think it through</li></ul>
           </div>
           <div>
-            <p class="sub-h">How to play</p>
-            <ol class="steps"><li>Read all the words on the grid</li><li>◀ ▶ ▲ ▼ to move around</li><li>OK picks a word (OK again unpicks)</li><li>Pick a whole group, then Check</li><li>Crack every group for ⭐!</li></ol>
+            <p class="sub-h">How to play <span class="how only-tv">· TV remote</span><span class="how only-touch">· touch</span></p>
+            <ol class="steps only-tv"><li>Read all the words on the grid</li><li>◀ ▶ ▲ ▼ to move around</li><li>OK picks a word (OK again unpicks)</li><li>Pick a whole group, then Check</li><li>Crack every group for ⭐!</li></ol><ol class="steps only-touch"><li>Read all the words on the grid</li><li>Tap a word to pick it — tap again to unpick</li><li>Pick a whole group, then Check</li><li>Crack every group for ⭐!</li></ol>
           </div>
         </div>
         <div class="fact"><b>Did you know?</b> Putting things into groups is called sorting — brains love it!</div>
@@ -756,11 +885,15 @@
     <div class="lb" id="lb-word_groups"><a class="x" href="#word_groups">&times;</a>
       <img src="full/word_groups.webp" alt="Word Groups full screenshot">
       <div class="cap">Word Groups — actual gameplay on Android TV</div></div>
+    <div class="lb" id="lbp-word_groups"><a class="x" href="#word_groups">&times;</a>
+      <img src="phone/full/word_groups.webp" alt="Word Groups full phone screenshot">
+      <div class="cap">Word Groups — actual gameplay on a phone</div></div>
 </div><div class="mnav"><a href="eye_spy.html">← Eye Spy</a><a href="number_land.html">Number Land →</a></div></div>
 <footer><div class="wrap fgrid">
-  <div>
+  <div style="max-width:54ch">
     <div style="font-family:Fraunces,serif;font-weight:600;color:#E3E2E9;margin-bottom:6px">BrainPlay</div>
-    A learning arcade for Android TV. Made for the sofa, the remote and one curious child at a time.
+    A learning arcade for Android TV, phones and tablets. Made for the sofa, the remote, small fingers and
+    one curious child at a time.
   </div>
   <div>
     <a href="https://play.google.com/store/apps/details?id=com.mahesh.brainplay">Get BrainPlay on Google Play</a><br>

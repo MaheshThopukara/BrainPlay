@@ -3,6 +3,7 @@
   --bg:#0E0F13; --surf:#14151B; --surf2:#1A1D26; --ink:#E3E2E9; --mute:#878CA2;
   --violet:#6A57F5; --gold:#FFD66B; --mint:#8FD891;
   --hair:rgba(255,255,255,.09); --hair2:rgba(255,255,255,.14);
+  --bezel:#1b1e28;
   --accent:#6A57F5;
   --maxw:1180px;
 }
@@ -64,6 +65,13 @@ header.nav{
   background:#000;
 }
 .tv-foot{height:12px;background:linear-gradient(180deg,#1b1e28,#0d0e12)}
+/* the hero's television with a phone standing in front of it — the same game on both */
+.duo{position:relative; padding:0 10% 9% 0}
+.duo .ph{
+  position:absolute; right:0; bottom:0; width:22%; border-radius:18px; overflow:hidden;
+  border:4px solid var(--bezel); background:#000;
+  box-shadow:0 30px 60px -18px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.07);
+}
 .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:26px}
 .btn{
   display:inline-flex; align-items:center; gap:9px; padding:12px 22px; border-radius:11px;
@@ -99,6 +107,20 @@ header.nav{
 section{padding:76px 0}
 .sec-head{max-width:64ch; margin-bottom:40px}
 
+/* every screen: the devices stand on one shelf, bottoms aligned, sized roughly as they are in a room */
+.shelf{display:flex; align-items:flex-end; justify-content:center; gap:2.6%; margin:4px 0 34px}
+.dev{margin:0; border:5px solid var(--bezel); background:#000; overflow:hidden;
+  box-shadow:0 34px 70px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.06)}
+.dev img{width:100%}
+.dev-tv{flex:0 0 43%; border-radius:12px; border-width:6px}
+.dev-tablet{flex:0 0 28%; border-radius:16px; border-width:7px}
+.dev-fold{flex:0 0 14%; border-radius:14px}
+.dev-phone{flex:0 0 8.4%; border-radius:14px; border-width:4px}
+.tvstand{display:flex; flex-direction:column; align-items:center; flex:0 0 43%}
+.tvstand .dev-tv{flex:none; width:100%}
+.tvstand::after{content:""; width:26%; height:9px; margin-top:-1px; border-radius:0 0 6px 6px;
+  background:linear-gradient(180deg,#1b1e28,#0d0e12)}
+
 /* feature cards */
 .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(252px,1fr)); gap:16px}
 .card{
@@ -131,9 +153,16 @@ section{padding:76px 0}
   background:var(--surf); border:1px solid var(--hair); border-radius:16px; overflow:hidden;
   display:grid; grid-template-columns:minmax(0,420px) minmax(0,1fr);
 }
-.game figure{margin:0; background:#000; border-right:1px solid var(--hair)}
+.game figure{margin:0; background:#000; border-right:1px solid var(--hair); position:relative; min-height:380px}
 .game figure a{display:block}
-.game figure img{width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
+/* the same game on a phone, standing in front of the television's picture */
+.game figure .ph{
+  position:absolute; right:16px; bottom:16px; width:27%; border-radius:14px; overflow:hidden;
+  border:3px solid var(--bezel); background:#000;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,.95), 0 0 0 1px rgba(255,255,255,.08);
+}
+.game figure .ph img{width:100%}
+.game figure .tvl img{width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
 .game .body{padding:24px 26px}
 .g-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:9px}
 .g-head .em{font-size:1.3rem}
@@ -149,6 +178,7 @@ section{padding:76px 0}
   font-size:.7rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase;
   color:var(--mute); margin:0 0 8px;
 }
+.sub-h .how{color:var(--ma); letter-spacing:.08em}
 .two{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:16px}
 .bens{display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0; list-style:none}
 .bens li{
@@ -162,6 +192,21 @@ ol.steps li{margin-bottom:3px}
   padding:8px 0 8px 14px; background:linear-gradient(90deg,rgba(255,255,255,.03),transparent);
 }
 .fact b{color:var(--ma); font-weight:600}
+
+/* the controls switch: two radios ahead of the page, so one choice re-words every card below them.
+   Visually hidden rather than display:none, so they stay reachable from the keyboard. */
+.ctl{position:fixed; top:0; left:0; opacity:0; pointer-events:none}  /* fixed: focusing one never scrolls the page */
+.ctlrow{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:18px 0 22px;
+  font-size:.86rem; color:var(--mute)}
+.ctlbar{display:inline-flex; gap:4px; padding:4px; border-radius:999px;
+  border:1px solid var(--hair2); background:rgba(255,255,255,.03)}
+.ctlbar label{cursor:pointer; font-weight:600; padding:6px 14px; border-radius:999px; color:var(--mute)}
+#ctl-tv:checked ~ .wrap label[for=ctl-tv],
+#ctl-touch:checked ~ .wrap label[for=ctl-touch]{background:var(--ma); color:#0E0F13}
+#ctl-tv:focus-visible ~ .wrap label[for=ctl-tv],
+#ctl-touch:focus-visible ~ .wrap label[for=ctl-touch]{outline:2px solid var(--ink); outline-offset:2px}
+#ctl-tv:checked ~ .wrap .only-touch,
+#ctl-touch:checked ~ .wrap .only-tv{display:none}
 
 /* module page header */
 .mhead{padding:56px 0 8px}
@@ -198,7 +243,8 @@ footer a{color:#B9B8C6}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:last-child{grid-column:1 / -1}
   .game{grid-template-columns:1fr}
-  .game figure{border-right:none; border-bottom:1px solid var(--hair)}
+  .game figure{border-right:none; border-bottom:1px solid var(--hair); min-height:0; padding-bottom:22%}
+  .game figure .ph{width:24%; right:12px; bottom:12px; border-radius:10px}
   .two{grid-template-columns:1fr; gap:16px}
 }
 /* Below this the three nav links cannot sit on one line: they wrap inside a fixed-height
@@ -210,6 +256,13 @@ footer a{color:#B9B8C6}
   .hero{padding:44px 0 12px}
   .wrap{padding:0 18px}
   section{padding:54px 0}
+  /* on a phone the shelf keeps its line-up; thinner bezels keep the smallest screens readable */
+  .shelf{gap:2%}
+  .dev{border-width:3px}
+  .dev-tv{border-width:4px}
+  .dev-phone{border-width:2px; border-radius:8px}
+  .dev-fold{border-radius:8px}
+  .duo .ph{border-width:3px; border-radius:12px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important; scroll-behavior:auto!important}
